@@ -1,0 +1,41 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<title>Untitled Document</title>
+</head>
+
+<body>
+<form id="form1" name="form1" method="post" action="/myapp/edit_vaccancy_post/">
+    {% csrf_token %}
+    <input type="hidden" name="id" value="{{ data.id }}"/>
+  <table width="200" border="1">
+    <tr>
+      <td>VACCANCY NO</td>
+      <td><input type="text" name="textfield" id="textfield" value="{{ data.vaccancy_no }}"/></td>
+    </tr>
+    <tr>
+      <td>JOB TITLE</td>
+      <td><input type="text" name="textfield2" id="textfield2" value="{{ data.job_title }}"/></td>
+    </tr>
+    <tr>
+      <td>STARTING DATE</td>
+      <td><input type="date" name="textfield3" id="textfield3" value="{{ data.start_date|date:'Y-m-d' }}"></td>
+    </tr>
+    <tr>
+      <td>ENDING DATE</td>
+      <td><input type="date" name="textfield4" id="textfield4" value="{{ data.end_date|date:'Y-m-d' }}"/></td>
+    </tr>
+    <tr>
+      <td>EXPRIENCE</td>
+      <td><input type="text" name="textfield5" id="textfield5" value="{{ data.experience }}"></td>
+    </tr>
+
+    <tr>
+      <td>&nbsp;</td>
+      <td><input type="submit" name="button" id="button" value="EDIT" /></td>
+    </tr>
+  </table>
+</form>
+</body>
+</html>
