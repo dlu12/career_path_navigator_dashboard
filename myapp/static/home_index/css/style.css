@@ -9797,7 +9797,7 @@ h6,
 }
 
 .jumbotron {
-  background: linear-gradient(rgba(40, 120, 235, 0.9), rgba(40, 120, 235, 0.9)), url(../img/header.jpg), no-repeat center center;
+  background: linear-gradient(rgba(40, 120, 235, 0.9), rgba(0, 0, 0, 0)), url(../img/header.jpg), no-repeat center center;
   background-size: cover;
 }
 

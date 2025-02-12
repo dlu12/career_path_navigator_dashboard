@@ -33,6 +33,8 @@ def login_post(request):
         return HttpResponse("<script>alert('Invalid User and password'); window.location = '/myapp/login_get/'</script>")
 
 def add_college_get(request):
+    if request.session['lid']=='':
+        return HttpResponse("<script>alert('Please login'); window.location = '/myapp/login_get/'</script>")
     return render(request,'admin/ADD COLLEGE.html')
 
 def add_college_post(request):
@@ -80,6 +82,8 @@ def add_college_post(request):
 
 
 def add_notification_get(request):
+    if request.session['lid'] == '':
+        return HttpResponse("<script>alert('Please login'); window.location = '/myapp/login_get/'</script>")
     return render(request,'admin/ADD NOTIFICATION.html')
 
 def add_notification_post(request):
@@ -95,6 +99,8 @@ def add_notification_post(request):
 
 
 def add_skill_get(request):
+    if request.session['lid'] == '':
+        return HttpResponse("<script>alert('Please login'); window.location = '/myapp/login_get/'</script>")
     res = Skill.objects.all()
     return render(request, 'admin/ADD SKILL.html', {'data': res})
 
@@ -218,6 +224,8 @@ def send_reply_post(request):
 
 
 def view_skill_get(request):
+    if request.session['lid'] == '':
+        return HttpResponse("<script>alert('Please login'); window.location = '/myapp/login_get/'</script>")
     res=Skill.objects.all()
     return render(request,'admin/VIEW SKILL.html',{'data':res})
 
@@ -228,6 +236,8 @@ def view_skill_post(request):
 
 
 def view_college_get(request):
+    if request.session['lid'] == '':
+        return HttpResponse("<script>alert('Please login'); window.location = '/myapp/login_get/'</script>")
     res=College.objects.all()
     return render(request,'admin/VIEW COLLEGE.html',{'data':res})
 
@@ -245,6 +255,8 @@ def company_home(request):
 
 
 def view_company_get(request):
+    if request.session['lid'] == '':
+        return HttpResponse("<script>alert('Please login'); window.location = '/myapp/login_get/'</script>")
     res = Company.objects.filter(status="pending")
     return render(request, 'admin/VIEW COMPANY.html', {'data': res})
 
@@ -256,6 +268,8 @@ def view_company_post(request):
 
 
 def view_rejected_company_get(request):
+    if request.session['lid'] == '':
+        return HttpResponse("<script>alert('Please login'); window.location = '/myapp/login_get/'</script>")
     res = Company.objects.filter(status="rejected")
     return render(request, 'admin/VIEW REJECTED COMPANY.html', {'data': res})
 
@@ -266,6 +280,8 @@ def view_rejected_company_post(request):
     return render(request, 'admin/VIEW REJECTED COMPANY.html', {'data': res})
 
 def view_approved_company_get(request):
+    if request.session['lid'] == '':
+        return HttpResponse("<script>alert('Please login'); window.location = '/myapp/login_get/'</script>")
     res=Company.objects.filter(status="approved")
     return render(request,'admin/VIEW APPROVED COMPANY.html',{'data':res})
 
@@ -293,6 +309,8 @@ def reject_company(request,id):
 
 
 def view_complaints_get(request):
+    if request.session['lid'] == '':
+        return HttpResponse("<script>alert('Please login'); window.location = '/myapp/login_get/'</script>")
     res = Complaint.objects.all()
     return render(request, 'admin/VIEW COMPLAINTS.html', {'data': res})
 
@@ -315,6 +333,8 @@ def view_course_post(request):
 
 
 def view_notification_get(request):
+    if request.session['lid'] == '':
+        return HttpResponse("<script>alert('Please login'); window.location = '/myapp/login_get/'</script>")
     res = Notification.objects.all()
     return render(request, 'admin/VIEW NOTIFICATION.html', {'data': res})
 
@@ -344,6 +364,8 @@ def view_vaccancy_post(request):
 
 
 def add_vaccancy_company_get(request):
+    if request.session['lid'] == '':
+        return HttpResponse("<script>alert('Please login'); window.location = '/myapp/login_get/'</script>")
     return render(request,'company/ADD VACCANCY COMPANY.html')
 
 def add_vaccancy_company_post(request):
@@ -367,6 +389,8 @@ def add_vaccancy_company_post(request):
 
 
 def company_change_password_get(request):
+    if request.session['lid'] == '':
+        return HttpResponse("<script>alert('Please login'); window.location = '/myapp/login_get/'</script>")
     return render(request,'company/CHANGE PASSWORD COMPANY.html')
 
 def company_change_password_post(request):
@@ -568,6 +592,8 @@ def reject_request_get(request,id):
 
 
 def view_profile_get(request):
+    if request.session['lid'] == '':
+        return HttpResponse("<script>alert('Please login'); window.location = '/myapp/login_get/'</script>")
     data=Company.objects.get(LOGIN_id=request.session['lid'])
     return render(request,'company/VIEW PROFILE COMPANY.html',{"data":data})
 
@@ -586,6 +612,8 @@ def view_rejected_request_post(request):
     return render(request, 'company/VIEW REJECTED REQUEST.html', {"data": obj})
 
 def view_skill_company_get(request):
+    if request.session['lid'] == '':
+        return HttpResponse("<script>alert('Please login'); window.location = '/myapp/login_get/'</script>")
     data = Skill.objects.all()
     return render(request,'company/VIEW SKILL.html',{"data":data})
 def view_skill_company_post(request):
@@ -595,6 +623,8 @@ def view_skill_company_post(request):
 
 
 def view_vaccancy_company_get(request):
+    if request.session['lid'] == '':
+        return HttpResponse("<script>alert('Please login'); window.location = '/myapp/login_get/'</script>")
     data=Vaccancy.objects.filter(COMPANY__LOGIN_id=request.session['lid'])
     return render(request,'company/VIEW VACCANCY COMPANY.html',{'data':data})
 def view_vaccancy_company_post(request):
