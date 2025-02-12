@@ -1,22 +1,27 @@
-<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
-<html xmlns="http://www.w3.org/1999/xhtml">
-<head>
-<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
-<title>Untitled Document</title>
-</head>
+{#<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">#}
+{#<html xmlns="http://www.w3.org/1999/xhtml">#}
+{#<head>#}
+{#<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />#}
+{#<title>Untitled Document</title>#}
+{#</head>#}
+{##}
+{#<body>#}
 
-<body>
+{#<body>#}
+{% extends "COLLEGE/college_index.html" %}
+{% block body %}
+
 <form action="/myapp/edit_facility_post/" method="post" enctype="multipart/form-data" name="form1" id="form1">
           {% csrf_token %}
     <input type="hidden" name="id" value="{{ data.id }}">
-  <table width="200" border="1">
+  <table width="200" border="1" class="table table-borderd mt-4 table-dark -align-center ">
     <tr>
       <td>FACILITY NAME</td>
-      <td><input type="text" name="textfield" id="textfield"  value="{{ data.facility_name }}"/></td>
+      <td><input type="text" name="textfield" class="form-control" id="textfield"  value="{{ data.facility_name }}"/></td>
     </tr>
     <tr>
       <td>DETAILS</td>
-      <td><input type="text" name="textfield2" id="textfield2" value="{{ data.details }}"/></td>
+      <td><input type="text" name="textfield2" class="form-control" id="textfield2" value="{{ data.details }}"/></td>
     </tr>
     <tr>
       <td>PHOTO</td>
@@ -29,5 +34,8 @@
     </tr>
   </table>
 </form>
-</body>
-</html>
+
+{% endblock %}
+
+{#</body>#}
+{#</html>#}

@@ -240,7 +240,7 @@ def view_college_post(request):
 ################company view
 
 def company_home(request):
-    return render(request,'company/COMPANY HOME.html')
+    return render(request,'company/company_index.html')
 
 
 
@@ -304,7 +304,7 @@ def view_complaints_post(request):
 
 
 def view_course_get(request,id):
-    res = Course.objects.filter(COLLEGE_id=id)
+    res = Course.objects.filter(DEPARTMENT__COLLEGE_id=id)
     request.session['cid']=id
     return render(request, 'admin/VIEW COURSE.html', {'data': res})
 
@@ -379,11 +379,11 @@ def company_change_password_post(request):
         Login.objects.get(id = request.session['lid'], password = current_password)
         if new_password == confirm_password :
             Login.objects.filter(id=request.session['lid']).update( password=confirm_password)
-            return HttpResponse("<script>alert('Successfully updated password'); window.location = '/myapp/admin_home/'</script>")
+            return HttpResponse("<script>alert('Successfully updated password'); window.location = '/myapp/company_home/'</script>")
         else :
-            return HttpResponse("<script>alert('Password mismatched'); window.location = '/myapp/change_password_get/'</script>")
+            return HttpResponse("<script>alert('Password mismatched'); window.location = '/myapp/company_change_password_get/'</script>")
     else :
-        return HttpResponse("<script>alert('Please check your current password'); window.location = '/myapp/change_password_get/'</script>")
+        return HttpResponse("<script>alert('Please check your current password'); window.location = '/myapp/company_change_password_get/'</script>")
 
 
 
@@ -473,7 +473,7 @@ def edit_vaccancy_post(request):
 
 
 def signup_company_get(request):
-    return render(request,'company/SIGNUP COMPANY.html')
+    return render(request,'company/signup_index.html')
 
 def signup_company_post(request):
     name = request.POST['textfield']
@@ -633,11 +633,11 @@ def college_change_password_post(request):
         Login.objects.get(id = request.session['lid'], password = current_password)
         if new_password == confirm_password :
             Login.objects.filter(id=request.session['lid']).update( password=confirm_password)
-            return HttpResponse("<script>alert('Successfully updated password'); window.location = '/myapp/admin_home/'</script>")
+            return HttpResponse("<script>alert('Successfully updated password'); window.location = '/myapp/login_get/'</script>")
         else :
-            return HttpResponse("<script>alert('Password mismatched'); window.location = '/myapp/change_password_get/'</script>")
+            return HttpResponse("<script>alert('Password mismatched'); window.location = '/myapp/college_change_password_get/'</script>")
     else :
-        return HttpResponse("<script>alert('Please check your current password'); window.location = '/myapp/change_password_get/'</script>")
+        return HttpResponse("<script>alert('Please check your current password'); window.location = '/myapp/college_change_password_get/'</script>")
 
 
 
@@ -645,7 +645,7 @@ def college_change_password_post(request):
 
 
 def college_home(request):
-    return render(request,'COLLEGE/collegeHome.html')
+    return render(request,'COLLEGE/college_index.html')
 
 
 def add_course_get(request):
@@ -656,7 +656,7 @@ def add_course_post(request):
     course_name=request.POST['textfield']
     semester=request.POST['textfield2']
     id=request.POST['select']
-
+    print(course_name,semester,id)
     a=Course()
     a.course_name=course_name
     a.semester=semester
@@ -674,6 +674,7 @@ def add_department_post(request):
 
     a=Department()
     a.department_name=department_name
+    a.COLLEGE=College.objects.get(LOGIN_id=request.session['lid'])
     a.save()
     return HttpResponse(
         "<script>alert('add successfully'); window.location = '/myapp/college_home/'</script>")
@@ -848,7 +849,7 @@ def view_college_profile_get(request):
 
 
 def view_course_college_get(request):
-    a=Course.objects.all()
+    a=Course.objects.filter(DEPARTMENT__COLLEGE__LOGIN_id=request.session['lid'])
 
     return render(request, 'COLLEGE/VIEW COURSE COLLEGE.html',{"data":a})
 
@@ -903,14 +904,14 @@ def logout(request):
 
 
 def user_login(request):
-    username=request.POST['username']
+    username=request.POST['name']
     password=request.POST['password']
     a= Login.objects.filter(username= username, password=password)
     if a.exists():
         b = Login.objects.get(username= username, password = password)
         lid=b.id
         if b.type == "user":
-            return JsonResponse({"status":"ok"})
+            return JsonResponse({"status":"ok","lid":str(lid)})
         else :
             return JsonResponse({"status":"no"})
     else :
@@ -947,7 +948,7 @@ def user_signup(request):
     pin = request.POST['pin']
     district = request.POST['district']
     state = request.POST['state']
-    photo = request.FILES['photo']
+    photo = request.POST['photo']
     password = request.POST['password']
     confirm_password = request.POST['confirmpassword']
 
@@ -967,7 +968,7 @@ def user_signup(request):
         lobj = Login()
         lobj.username = email
         lobj.password = confirm_password
-        lobj.type = 'pending'
+        lobj.type = 'user'
         lobj.save()
 
         cobj = User()
@@ -985,19 +986,89 @@ def user_signup(request):
         cobj.status = "pending"
         cobj.LOGIN = lobj
         cobj.save()
-        return JsonResponse({"status": "Ok"})
+        return JsonResponse({"status": "ok"})
     else:
         return JsonResponse({"status": "No"})
+
+def user_viewprofile(request):
+     lid=request.POST['lid']
+     a=User.objects.get(LOGIN_id=lid)
+     return JsonResponse({"status": "ok",
+                          "name":a.name,
+                          "email":a.email,
+                          "phone":a.phone,
+                          "dob":a.dob,
+                          "gender":a.gender,
+                          "place":a.place,
+                          "post":a.post,
+                          "pin":a.pin,
+                          "district":a.district,
+                          "state":a.state,
+                          "photo":a.photo,
+                          })
+
+def user_editprofile(request):
+    name = request.POST['name']
+    email = request.POST['email']
+    phone = request.POST['phone']
+    dob = request.POST['dob']
+    gender = request.POST['gender']
+    place = request.POST['place']
+    post = request.POST['post']
+    pin = request.POST['pin']
+    district = request.POST['district']
+    state = request.POST['state']
+    photo = request.POST['photo']
+    lid = request.POST['lid']
+    print(email)
+
+    cobj = User.objects.get(LOGIN_id=lid)
+
+    if Login.objects.filter(username=email).exists():
+        if len(photo) > 0:
+            from datetime import datetime
+            import base64
+            date = datetime.now().strftime('%Y%m%d-%H%M%S') + "1.jpg"
+            a = base64.b64decode(photo)
+            fs = open("C:\\Users\\Lenovo\\PycharmProjects\\career_path_navigator\\media\\User\\" + date, "wb")
+            photopath = '/media/user/' + date
+
+            fs.write(a)
+            fs.close()
+            cobj.photo = photopath
+            cobj.save()
+
+        lobj = Login.objects.get(id=lid)
+        lobj.username = email
+        lobj.save()
+
+
+        cobj.name = name
+        cobj.email = email
+        cobj.phone = phone
+        cobj.dob = dob
+        cobj.gender = gender
+        cobj.place = place
+        cobj.post = post
+        cobj.pin = pin
+        cobj.district = district
+        cobj.state = state
+        cobj.save()
+        return JsonResponse({"status": "ok"})
+
 
 def user_addownskill(request):
     skill = request.POST['skill']
     lid = request.POST['lid']
 
+
+    print(skill,lid,"=====")
+
     obj= OwnSkill()
     obj.skill= skill
     obj.USER= User.objects.get(LOGIN__id=lid)
     obj.save()
-    return JsonResponse({"status": "Ok"})
+    return JsonResponse({"status": "ok"})
 
 def user_viewownskill(request):
     obj= OwnSkill.objects.all()
@@ -1029,7 +1100,8 @@ def user_viewapprovedcompany(request):
 
     l= []
     for i in obj :
-        l.append({"id":i.id,
+        l.append({
+                  "id":i.id,
                   "name" : i.name,
                   "since": i.since,
                   "email": i.email,
@@ -1042,8 +1114,8 @@ def user_viewapprovedcompany(request):
                   "logo": i.logo,
                   "photo": i.photo,
         })
-
-    return JsonResponse({"status": "Ok", 'data': l})
+    print(l)
+    return JsonResponse({"status": "Ok","data": l})
 
 
 def user_viewvaccancy(request):
@@ -1080,18 +1152,20 @@ def user_send_request(request):
 def user_send_complaint(request):
     complaint=request.POST['complaint']
     lid=request.POST['lid']
+
     c=Complaint()
     c.date=datetime.now().today()
     c.complaint=complaint
     c.reply='pending'
     c.status='pending'
-    c.USER=User.objects.get(login_id=lid)
+    c.USER=User.objects.get(LOGIN_id=lid)
     c.save()
-    return JsonResponse({"status": "Ok"})
+    return JsonResponse({"status": "ok"})
 
 
 def user_view_reply(request):
-    obj = Complaint.objects.all()
+    lid=request.POST['lid']
+    obj = Complaint.objects.filter(USER__LOGIN_id=lid)
     l = []
     for i in obj:
         l.append({"id": i.id,
@@ -1100,7 +1174,8 @@ def user_view_reply(request):
                   "reply": i.reply,
                   "status": i.status,
                   })
-        return JsonResponse({"status": "Ok",'data':l})
+    print(l)
+    return JsonResponse({"status": "ok",'data':l})
 
 
 
@@ -1121,7 +1196,8 @@ def user_view_college(request):
                   "state":i.state,
                   "since":i.since,
                   })
-        return JsonResponse({"status": "Ok",'data':l})
+    print(l)
+    return JsonResponse({"status": "ok",'data':l})
 
 
 def user_view_course(request):
@@ -1133,7 +1209,7 @@ def user_view_course(request):
                   "semester": i.semester,
                   'department':i.DEPARTMENT.department_name,
                   })
-        return JsonResponse({"status": "Ok",'data':l})
+        return JsonResponse({"status": "ok",'data':l})
 
 
 def user_view_fees(request):
@@ -1145,7 +1221,7 @@ def user_view_fees(request):
                   "sem": i.sem,
                   'course':i.COURSE.course_name,
                   })
-        return JsonResponse({"status": "Ok",'data':l})
+        return JsonResponse({"status": "ok",'data':l})
 
 
 
@@ -1158,7 +1234,7 @@ def user_view_facility(request):
                   "details": i.details,
                   'photo':i.photo,
                   })
-        return JsonResponse({"status": "Ok",'data':l})
+        return JsonResponse({"status": "ok",'data':l})
 
 
 

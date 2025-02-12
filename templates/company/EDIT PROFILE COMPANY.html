@@ -1,49 +1,53 @@
-<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
-<html xmlns="http://www.w3.org/1999/xhtml">
-<head>
-<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
-<title>Untitled Document</title>
-</head>
+{#<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">#}
+{#<html xmlns="http://www.w3.org/1999/xhtml">#}
+{#<head>#}
+{#<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />#}
+{#<title>Untitled Document</title>#}
+{#</head>#}
+{##}
+{#<body>#}
 
-<body>
+{% extends "company/company_index.html" %}
+{% block body %}
+
 <form action="/myapp/edit_profile_post/" method="post" enctype="multipart/form-data" name="form1" id="form1">
     {% csrf_token %}
-  <table width="200" border="1">
+  <table width="200" border="1" class="table table-borderd mt-4 table-dark -align-center ">
     <tr>
       <td>NAME</td>
-      <td><input type="text" name="textfield" id="textfield" value="{{ data.name }}" /></td>
+      <td><input type="text" name="textfield" class="form-control" id="textfield" value="{{ data.name }}" /></td>
     </tr>
     <tr>
       <td>SINCE</td>
-      <td><input type="text" name="textfield2" id="textfield2" value="{{ data.since }}"/></td>
+      <td><input type="text" name="textfield2" class="form-control" id="textfield2" value="{{ data.since }}"/></td>
     </tr>
     <tr>
       <td>EMAIL</td>
-      <td><input type="text" name="textfield3" id="textfield3" value="{{ data.email }}" readonly/></td>
+      <td><input type="text" name="textfield3"  class="form-control"id="textfield3" value="{{ data.email }}" readonly/></td>
     </tr>
     <tr>
       <td>PHONE</td>
-      <td><input type="text" name="textfield4" id="textfield4" value="{{ data.phone }}"/></td>
+      <td><input type="text" name="textfield4" class="form-control" id="textfield4" value="{{ data.phone }}"/></td>
     </tr>
     <tr>
       <td>PLACE</td>
-      <td><input type="text" name="textfield5" id="textfield5" value="{{ data.place }}"/></td>
+      <td><input type="text" name="textfield5" class="form-control" id="textfield5" value="{{ data.place }}"/></td>
     </tr>
     <tr>
       <td>POST</td>
-      <td><input type="text" name="textfield6" id="textfield6" value="{{data.post}}"/></td>
+      <td><input type="text" name="textfield6" class="form-control" id="textfield6" value="{{data.post}}"/></td>
     </tr>
     <tr>
       <td>PIN</td>
-      <td><input type="text" name="textfield7" id="textfield7" value="{{ data.pin }}"/></td>
+      <td><input type="text" name="textfield7" class="form-control" id="textfield7" value="{{ data.pin }}"/></td>
     </tr>
     <tr>
       <td>DISTRICT</td>
-      <td><input type="text" name="textfield8" id="textfield8" value="{{ data.district }}"/></td>
+      <td><input type="text" name="textfield8" class="form-control" id="textfield8" value="{{ data.district }}"/></td>
     </tr>
     <tr>
       <td>STATE</td>
-      <td><input type="text" name="textfield9" id="textfield9" value="{{ data.state }}"/></td>
+      <td><input type="text" name="textfield9" class="form-control" id="textfield9" value="{{ data.state }}"/></td>
     </tr>
     <tr>
       <td>LOGO</td>
@@ -63,5 +67,8 @@
     </tr>
   </table>
 </form>
-</body>
-</html>
+
+{% endblock %}
+
+{#</body>#}
+{#</html>#}

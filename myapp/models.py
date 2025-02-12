@@ -82,6 +82,7 @@ class Complaint(models.Model):
 
 class Department(models.Model):
     department_name = models.CharField(max_length=100)
+    COLLEGE=models.ForeignKey(College,on_delete=models.CASCADE,default="")
 
 class Course(models.Model):
     course_name = models.CharField(max_length=100)

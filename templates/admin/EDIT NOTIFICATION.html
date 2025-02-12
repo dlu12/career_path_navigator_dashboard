@@ -1,19 +1,22 @@
-<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
-<html xmlns="http://www.w3.org/1999/xhtml">
-<head>
-<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
-<title>Untitled Document</title>
-</head>
+{#<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">#}
+{#<html xmlns="http://www.w3.org/1999/xhtml">#}
+{#<head>#}
+{#<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />#}
+{#<title>Untitled Document</title>#}
+{#</head>#}
+{##}
+{#<body>#}
+{% extends "admin/admin_index.html" %}
+{% block body %}
 
-<body>
 <form id="form1" name="form1" method="post" action="/myapp/edit_notification_post/">
 
     <input type="hidden" name="id" value="{{ data.id }}">
     {% csrf_token %}
-  <table width="200" border="1">
+  <table width="200" border="1" class="table table-borderd mt-4 table-dark -align-center">
     <tr>
       <td>NOTIFICATION</td>
-      <td><input type="text" name="textfield" id="textfield" value="{{ data.notification }}"/></td>
+      <td><input type="text" name="textfield" id="textfield" class="form-control" value="{{ data.notification }}"/></td>
     </tr>
     <tr>
       <td>&nbsp;</td>
@@ -21,5 +24,7 @@
     </tr>
   </table>
 </form>
-</body>
-</html>
+{% endblock %}
+
+{#</body>#}
+{#</html>#}

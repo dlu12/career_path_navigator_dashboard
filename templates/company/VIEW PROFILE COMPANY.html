@@ -1,14 +1,18 @@
-<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
-<html xmlns="http://www.w3.org/1999/xhtml">
-<head>
-<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
-<title>Untitled Document</title>
-</head>
+{#<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">#}
+{#<html xmlns="http://www.w3.org/1999/xhtml">#}
+{#<head>#}
+{#<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />#}
+{#<title>Untitled Document</title>#}
+{#</head>#}
+{##}
+{#<body>#}
 
-<body>
+{% extends "company/company_index.html" %}
+{% block body %}
+
 <form action="/myapp/view_profile_post/" method="post" enctype="multipart/form-data" name="form1" id="form1">
   {% csrf_token %}
-    <table width="200" border="1">
+    <table width="200" border="1" class="table table-borderd mt-4 table-dark -align-center ">
     <tr>
       <td>NAME</td>
       <td>{{ data.name }}</td>
@@ -49,9 +53,12 @@
     </tr>
     <tr>
       <td>&nbsp;</td>
-      <td><a href="/myapp/edit_profile_get/">EDIT</a></td>
+      <td><a href="/myapp/edit_profile_get/#abc">EDIT</a></td>
     </tr>
   </table>
 </form>
-</body>
-</html>
+
+{% endblock %}
+
+{#</body>#}
+{#</html>#}

@@ -130,10 +130,16 @@ urlpatterns = [
     path('user_addownskill/',views.user_addownskill),
     path('user_viewownskill/',views.user_viewownskill),
     path('user_deleteownskill/<id>',views.user_deleteownskill),
-    path('user_viewapprovedcompany/<id>',views.user_viewapprovedcompany),
+    path('user_viewapprovedcompany/',views.user_viewapprovedcompany),
     path('user_viewvaccancy/',views.user_viewvaccancy),
     path('user_send_request/<id>',views.user_send_request),
-    path('user_send_complaint/<id>', views.user_send_complaint),
+    path('user_send_complaint/', views.user_send_complaint),
     path('user_view_reply/', views.user_view_reply),
+    path('user_view_college/', views.user_view_college),
+    path('user_view_course/', views.user_view_course),
+    path('user_view_facility/', views.user_view_facility),
+    path('user_view_fees/', views.user_view_fees),
+    path('user_viewprofile/', views.user_viewprofile),
+    path('user_editprofile/', views.user_editprofile),
 
 ]

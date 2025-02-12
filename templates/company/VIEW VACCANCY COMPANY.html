@@ -1,20 +1,25 @@
-<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
-<html xmlns="http://www.w3.org/1999/xhtml">
-<head>
-<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
-<title>Untitled Document</title>
-</head>
+{#<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">#}
+{#<html xmlns="http://www.w3.org/1999/xhtml">#}
+{#<head>#}
+{#<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />#}
+{#<title>Untitled Document</title>#}
+{#</head>#}
+{##}
+{#<body>#}
 
-<body>
+
+{% extends "company/company_index.html" %}
+{% block body %}
+
 <form id="form1" name="form1" method="post" action="/myapp/view_vaccancy_company_post/">
     {% csrf_token %}
-  <table width="200" border="1">
+  <table width="200" border="1" class="table table-borderd mt-4 table-dark -align-center ">
     <tr>
-      <td width="103"><input type="text" name="textfield" id="textfield" /></td>
+      <td width="103"><input type="text" name="textfield" id="textfield" class="form-control"/></td>
       <td width="81"><input type="submit" name="button" id="button" value="search" /></td>
     </tr>
   </table>
-  <table width="642" border="1">
+  <table width="642" border="1" class="table table-borderd mt-4 table-dark -align-center ">
     <tr>
       <th width="66" height="62" scope="col">SL NO</th>
       <th width="14" scope="col">JOB TITLE</th>
@@ -33,14 +38,17 @@
       <td>&nbsp;{{ i.end_date}}</td>
       <td>&nbsp;{{ i.vaccancy_no}}</td>
       <td>&nbsp;{{ i.experience}}</td>
-      <td><p><a href="/myapp/edit_vaccancy_get/{{ i.id }}">EDIT</a></p>
-      <p><a href="/myapp/delete_vaccancy_get/{{ i.id }}" onclick="return confirm('Are you sure')">DELETE</a></p>
-      <p><a href="/myapp/view_vaccancy_request_get/{{ i.id }}">REQUEST</a></p></td>
+      <td><p><a href="/myapp/edit_vaccancy_get/{{ i.id }}#abc">EDIT</a></p>
+      <p><a href="/myapp/delete_vaccancy_get/{{ i.id }}#abc" onclick="return confirm('Are you sure')">DELETE</a></p>
+      <p><a href="/myapp/view_vaccancy_request_get/{{ i.id }}#abc">REQUEST</a></p></td>
     </tr>
       {% endfor %}
   </table>
   <p>&nbsp;</p>
   <p>&nbsp;</p>
 </form>
-</body>
-</html>
+
+{% endblock %}
+
+{#</body>#}
+{#</html>#}
