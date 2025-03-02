@@ -16,23 +16,23 @@
   <table width="200" border="1" class="table table-borderd mt-4 table-dark -align-center ">
     <tr>
       <td>VACCANCY NO</td>
-      <td><input type="text" name="textfield" class="form-control" id="textfield" value="{{ data.vaccancy_no }}"/></td>
+      <td><input type="number" name="textfield" class="form-control" id="textfield" value="{{ data.vaccancy_no }}" required/></td>
     </tr>
     <tr>
       <td>JOB TITLE</td>
-      <td><input type="text" name="textfield2" class="form-control" id="textfield2" value="{{ data.job_title }}"/></td>
+      <td><input type="text" name="textfield2" class="form-control" id="textfield2" value="{{ data.job_title }}" required/></td>
     </tr>
     <tr>
       <td>STARTING DATE</td>
-      <td><input type="date" name="textfield3" class="form-control" id="textfield3" value="{{ data.start_date|date:'Y-m-d' }}"></td>
+      <td><input type="date" name="textfield3" class="form-control" id="textfield3" value="{{ data.start_date|date:'Y-m-d' }}" required/></td>
     </tr>
     <tr>
       <td>ENDING DATE</td>
-      <td><input type="date" name="textfield4" class="form-control" id="textfield4" value="{{ data.end_date|date:'Y-m-d' }}"/></td>
+      <td><input type="date" name="textfield4" class="form-control" id="textfield4" value="{{ data.end_date|date:'Y-m-d' }}" required/></td>
     </tr>
     <tr>
       <td>EXPRIENCE</td>
-      <td><input type="text" name="textfield5" class="form-control" id="textfield5" value="{{ data.experience }}"></td>
+      <td><input type="text" name="textfield5" class="form-control" id="textfield5" value="{{ data.experience }}" required/></td>
     </tr>
 
     <tr>

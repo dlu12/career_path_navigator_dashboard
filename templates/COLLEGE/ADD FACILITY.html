@@ -14,15 +14,15 @@
       {% csrf_token %}
     <tr>
       <td>FACILITY NAME</td>
-      <td><input type="text" name="textfield" id="textfield" class="form-control" /></td>
+      <td><input type="text" name="textfield" id="textfield" class="form-control" required pattern="[a-z A-Z]*"/></td>
     </tr>
     <tr>
       <td>DETAILS</td>
-      <td><input type="text" name="textfield2" id="textfield2" class="form-control" /></td>
+      <td><input type="text" name="textfield2" id="textfield2" class="form-control" required/></td>
     </tr>
     <tr>
       <td>PHOTO</td>
-      <td><input type="file" name="fileField" id="fileField" class="form-control" /></td>
+      <td><input type="file" name="fileField" id="fileField" class="form-control" required/></td>
     </tr>
     <tr>
       <td>&nbsp;</td>

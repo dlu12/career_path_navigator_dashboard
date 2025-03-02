@@ -17,16 +17,16 @@
   <table width="200" border="1" class="table table-borderd mt-4 table-dark -align-center ">
     <tr>
       <td>FACILITY NAME</td>
-      <td><input type="text" name="textfield" class="form-control" id="textfield"  value="{{ data.facility_name }}"/></td>
+      <td><input type="text" name="textfield" class="form-control" id="textfield"  value="{{ data.facility_name }}" pattern="[A-Z a-z]*" required/></td>
     </tr>
     <tr>
       <td>DETAILS</td>
-      <td><input type="text" name="textfield2" class="form-control" id="textfield2" value="{{ data.details }}"/></td>
+      <td><input type="text" name="textfield2" class="form-control" id="textfield2" value="{{ data.details }}" required/></td>
     </tr>
     <tr>
       <td>PHOTO</td>
       <td><img src="{{ data.photo }}" width="90" height="90">
-          <input type="file" name="fileField" id="fileField"/></td>
+          <input type="file" name="fileField" id="fileField" required/></td>
     </tr>
     <tr>
       <td>&nbsp;</td>

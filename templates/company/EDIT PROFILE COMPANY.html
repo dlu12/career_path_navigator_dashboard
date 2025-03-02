@@ -15,51 +15,51 @@
   <table width="200" border="1" class="table table-borderd mt-4 table-dark -align-center ">
     <tr>
       <td>NAME</td>
-      <td><input type="text" name="textfield" class="form-control" id="textfield" value="{{ data.name }}" /></td>
+      <td><input type="text" name="textfield" class="form-control" id="textfield" value="{{ data.name }}" pattern="[A-Z a-z]*" required/></td>
     </tr>
     <tr>
       <td>SINCE</td>
-      <td><input type="text" name="textfield2" class="form-control" id="textfield2" value="{{ data.since }}"/></td>
+      <td><input type="text" name="textfield2" class="form-control" id="textfield2" value="{{ data.since }}" required/></td>
     </tr>
     <tr>
       <td>EMAIL</td>
-      <td><input type="text" name="textfield3"  class="form-control"id="textfield3" value="{{ data.email }}" readonly/></td>
+      <td><input type="email" name="textfield3" class="form-control"id="textfield3" value="{{ data.email }}" required/></td>
     </tr>
     <tr>
       <td>PHONE</td>
-      <td><input type="text" name="textfield4" class="form-control" id="textfield4" value="{{ data.phone }}"/></td>
+      <td><input type="text" name="textfield4" class="form-control" id="textfield4" value="{{ data.phone }}" pattern="[9876][0-9]{9}" required/></td>
     </tr>
     <tr>
       <td>PLACE</td>
-      <td><input type="text" name="textfield5" class="form-control" id="textfield5" value="{{ data.place }}"/></td>
+      <td><input type="text" name="textfield5" class="form-control" id="textfield5" value="{{ data.place }}" pattern="[A-Z a-z]*" required/></td>
     </tr>
     <tr>
       <td>POST</td>
-      <td><input type="text" name="textfield6" class="form-control" id="textfield6" value="{{data.post}}"/></td>
+      <td><input type="text" name="textfield6" class="form-control" id="textfield6" value="{{data.post}}" pattern="[A-Z a-z]*" required/></td>
     </tr>
     <tr>
       <td>PIN</td>
-      <td><input type="text" name="textfield7" class="form-control" id="textfield7" value="{{ data.pin }}"/></td>
+      <td><input type="text" name="textfield7" class="form-control" id="textfield7" value="{{ data.pin }}" pattern="[0-9]{6}" required/></td>
     </tr>
     <tr>
       <td>DISTRICT</td>
-      <td><input type="text" name="textfield8" class="form-control" id="textfield8" value="{{ data.district }}"/></td>
+      <td><input type="text" name="textfield8" class="form-control" id="textfield8" value="{{ data.district }}" pattern="[A-Z a-z]*" required/></td>
     </tr>
     <tr>
       <td>STATE</td>
-      <td><input type="text" name="textfield9" class="form-control" id="textfield9" value="{{ data.state }}"/></td>
+      <td><input type="text" name="textfield9" class="form-control" id="textfield9" value="{{ data.state }}" pattern="[A-Z a-z]*" required/></td>
     </tr>
     <tr>
       <td>LOGO</td>
-      <td><img src="{{ data.logo }}" width="100" height="100"><input type="file" name="textfield10" id="textfield10" /></td>
+      <td><img src="{{ data.logo }}" width="100" height="100"><input type="file" name="textfield10" id="textfield10" required/></td>
     </tr>
     <tr>
       <td>PHOTO</td>
-      <td><img src="{{ data.photo}}" width="100" height="100"><input type="file" name="fileField2" id="fileField2" /></td>
+      <td><img src="{{ data.photo}}" width="100" height="100"><input type="file" name="fileField2" id="fileField2" required/></td>
     </tr>
     <tr>
       <td>PROOF</td>
-      <td><img src="{{ data.proof }}" width="100" height="100"><input type="file" name="fileField" id="fileField" /></td>
+      <td><img src="{{ data.proof }}" width="100" height="100"><input type="file" name="fileField" id="fileField" required/></td>
     </tr>
     <tr>
       <td>&nbsp;</td>

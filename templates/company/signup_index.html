@@ -70,59 +70,59 @@
                         <form method="POST" class="register-form" id="login-form" enctype="multipart/form-data" action="/myapp/signup_company_post/"  >
                             <div class="form-group">
                                 <label for="textfield"><i class="zmdi zmdi-account material-icons-name"></i></label>
-                                <input type="text" name="textfield" id="textfield" placeholder="Name"/>
+                                <input type="text" name="textfield" id="textfield" placeholder="Name"  pattern="[A-Z a-z]*" required/>
                             </div>
                             <div class="form-group">
                                 <label for="textfield2"><i class="zmdi zmdi-lock"></i></label>
-                                <input type="text" name="textfield2" id="textfield2" placeholder="Since"/>
+                                <input type="text" name="textfield2" id="textfield2" placeholder="Since" required/>
                             </div>
                             <div class="form-group">
                                 <label for="textfield3"><i class="zmdi zmdi-lock"></i></label>
-                                <input type="text" name="textfield3" id="textfield3" placeholder="Email"/>
+                                <input type="email" name="textfield3" id="textfield3" placeholder="Email" required/>
                             </div>
                             <div class="form-group">
                                 <label for="textfield4"><i class="zmdi zmdi-lock"></i></label>
-                                <input type="text" name="textfield4" id="textfield4" placeholder="Phone"/>
+                                <input type="text" name="textfield4" id="textfield4" placeholder="Phone" pattern="[9876][0-9]{9}" max required/>
                             </div>
                             <div class="form-group">
                                 <label for="textfield5"><i class="zmdi zmdi-lock"></i></label>
-                                <input type="text" name="textfield5" id="textfield5" placeholder="Place"/>
+                                <input type="text" name="textfield5" id="textfield5" placeholder="Place" pattern="[A-Z a-z]*" required/>
                             </div>
                             <div class="form-group">
                                 <label for="textfield6"><i class="zmdi zmdi-lock"></i></label>
-                                <input type="text" name="textfield6" id="textfield6" placeholder="Post"/>
+                                <input type="text" name="textfield6" id="textfield6" placeholder="Post" pattern="[A-Z a-z]*" required/>
                             </div>
                             <div class="form-group">
                                 <label for="textfield7"><i class="zmdi zmdi-lock"></i></label>
-                                <input type="text" name="textfield7" id="textfield7" placeholder="Pin"/>
+                                <input type="text" name="textfield7" id="textfield7" placeholder="Pin" pattern="[0-9]{6}" required/>
                             </div>
                             <div class="form-group">
                                 <label for="textfield8"><i class="zmdi zmdi-lock"></i></label>
-                                <input type="text" name="textfield8" id="textfield8" placeholder="District"/>
+                                <input type="text" name="textfield8" id="textfield8" placeholder="District" pattern="[A-Z a-z]*" required/>
                             </div>
                             <div class="form-group">
                                 <label for="textfield9"><i class="zmdi zmdi-lock"></i></label>
-                                <input type="text" name="textfield9" id="textfield9" placeholder="State"/>
+                                <input type="text" name="textfield9" id="textfield9" placeholder="State" pattern="[A-Z a-z]*" required/>
                             </div>
                             <div class="form-group">
                                 <label for="textfield10"><i class="zmdi zmdi-lock"></i></label>
-                                <input type="file" name="textfield10" id="textfield10" placeholder="Logo"/>
+                                <input type="file" name="textfield10" id="textfield10" placeholder="Logo" required/>
                             </div>
                             <div class="form-group">
                                 <label for="fileField2"><i class="zmdi zmdi-lock"></i></label>
-                                <input type="file" name="fileField2" id="fileField2" placeholder="Photo"/>
+                                <input type="file" name="fileField2" id="fileField2" placeholder="Photo" required/>
                             </div>
                             <div class="form-group">
                                 <label for="fileField"><i class="zmdi zmdi-lock"></i></label>
-                                <input type="file" name="fileField" id="fileField" placeholder="Proof"/>
+                                <input type="file" name="fileField" id="fileField" placeholder="Proof" required/>
                             </div>
                             <div class="form-group">
                                 <label for="textfield11"><i class="zmdi zmdi-lock"></i></label>
-                                <input type="text" name="textfield11" id="textfield11" placeholder="Password"/>
+                                <input type="text" name="textfield11" id="textfield11" placeholder="Password" required/>
                             </div>
                             <div class="form-group">
                                 <label for="textfield12"><i class="zmdi zmdi-lock"></i></label>
-                                <input type="text" name="textfield12" id="textfield12" placeholder="Confirm Password"/>
+                                <input type="text" name="textfield12" vid="textfield12" placeholder="Confirm Password" required/>
                             </div>
                             <div class="form-group">
                                 <input type="checkbox" name="remember-me" id="remember-me" class="agree-term" />

@@ -16,11 +16,11 @@
     <tr>
         {% csrf_token %}
       <td>DEPARTMENT NAME</td>
-      <td><input type="text" name="textfield" id="textfield" class="form-control" /></td>
+      <td><input type="text" name="textfield" id="textfield" class="form-control" pattern="[A-Z a-z]*" required/></td>
     </tr>
     <tr>
       <td>&nbsp;</td>
-      <td><input type="submit" name="button" id="button" value="ADD" /></td>
+      <td><input type="submit" name="button" id="button" value="ADD"/></td>
     </tr>
   </table>
 </form>
