@@ -12,16 +12,16 @@
 
 <form id="form1" name="form1" method="post" action="/myapp/view_notification_post/">
     {% csrf_token %}
-  <table width="200" border="1" class="table table-borderd mt-4 table-dark -align-center ">
+  <table  class="table table-borderd mt-4 -align-center ">
     <tr>
       <td>FROM</td>
       <td><input type="date" name="textfield" id="textfield" class="form-control" required/></td>
       <td>TO</td>
       <td><input type="date" name="textfield2" id="textfield2" class="form-control" required/></td>
-      <td><input type="submit" name="button" id="button" value="search" /></td>
+      <td><input type="submit" name="button" id="button" value="search" class="btn btn-info"/></td>
     </tr>
   </table>
-  <table width="200" border="1"  class="table table-borderd mt-4 table-dark -align-center ">
+  <table width="200" border="1"  class="table table-borderd mt-4 -align-center ">
     <tr>
       <th scope="col">SL NO</th>
       <th scope="col">DATE</th>
@@ -34,8 +34,8 @@
       <td>{{ forloop.counter }}</td>
       <td>{{ i.date }}</td>
       <td>&nbsp;{{ i.notification }}</td>
-      <td><a href="/myapp/edit_notification_get/{{ i.id }}#abc">EDIT</a></td>
-      <td><a href="/myapp/delete_notification/{{ i.id }}#abc" onclick="return confirm('Are You Sure')">DELETE</a></td>
+      <td><a href="/myapp/edit_notification_get/{{ i.id }}#abc" class="btn btn-info">EDIT</a></td>
+      <td><a href="/myapp/delete_notification/{{ i.id }}#abc" onclick="return confirm('Are You Sure')" class="btn btn-danger">DELETE</a></td>
     </tr>
       {% endfor %}
   </table>

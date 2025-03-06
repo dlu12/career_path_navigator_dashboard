@@ -69,6 +69,8 @@ class User(models.Model):
     district = models.CharField(max_length=100)
     state = models.CharField(max_length=100)
     photo = models.CharField(max_length=300)
+    qualification = models.CharField(max_length=300)
+    experience = models.CharField(max_length=300)
     LOGIN = models.ForeignKey(Login, on_delete=models.CASCADE)
 
 
@@ -98,7 +100,7 @@ class Vaccancy_Request(models.Model):
 
 
 class OwnSkill(models.Model):
-    skill = models.CharField(max_length=100)
+    SKILL = models.ForeignKey(Skill, on_delete=models.CASCADE)
     USER = models.ForeignKey(User, on_delete=models.CASCADE)
 
 class FeeStruct(models.Model):
@@ -119,3 +121,10 @@ class Resume(models.Model):
 class Vaccancy_Skill(models.Model):
     VACCANCY = models.ForeignKey(Vaccancy, on_delete=models.CASCADE)
     SKILL = models.ForeignKey(Skill, on_delete=models.CASCADE)
+
+class JobRequest(models.Model):
+    date = models.DateField()
+    USER =  models.ForeignKey(User, on_delete=models.CASCADE)
+    VACANCY =models.ForeignKey(Vaccancy, on_delete=models.CASCADE)
+    file=models.CharField(max_length=250)
+    status=models.CharField(max_length=100)

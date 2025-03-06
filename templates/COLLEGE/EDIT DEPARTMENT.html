@@ -14,14 +14,14 @@
 <form id="form1" name="form1" method="post" action="/myapp/edit_department_post/">
     {% csrf_token %}
     <input type="hidden" name="id" value="{{ data.id }}">
-  <table width="200" border="1" class="table table-borderd mt-4 table-dark -align-center ">
+  <table width="200" border="1" class="table table-borderd mt-4 -align-center ">
     <tr>
       <td>DEPARTMENT NAME</td>
       <td><input type="text" name="textfield" class="form-control" id="textfield" value="{{ data.department_name }}" pattern="[A-Z a-z]*" required/></td>
     </tr>
     <tr>
       <td>&nbsp;</td>
-      <td><input type="submit" name="button" id="button" value="EDIT" /></td>
+      <td><input type="submit" name="button" id="button" class="btn btn-info" value="EDIT" /></td>
     </tr>
   </table>
 </form>

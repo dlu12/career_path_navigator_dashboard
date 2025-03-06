@@ -12,13 +12,13 @@
 
 <form id="form1" name="form1" method="post" action="/myapp/view_skill_post/">
     {% csrf_token %}
-  <table width="200" border="1" class="table table-borderd mt-4 table-dark -align-center ">
+  <table class="table table-borderd mt-4 -align-center ">
     <tr>
       <td><input type="text" name="textfield" id="textfield" class="form-control" required/></td>
-      <td><input type="submit" name="button" id="button" value="SEARCH" /></td>
+      <td><input type="submit" name="button" id="button" value="SEARCH" class="btn btn-info"/></td>
     </tr>
   </table>
-  <table width="200" border="1" class="table table-borderd mt-4 table-dark -align-center ">
+  <table width="200" border="1" class="table table-borderd mt-4 -align-center ">
     <tr>
       <th scope="col">SL NO</th>
       <th scope="col">SKILL</th>
@@ -28,7 +28,7 @@
     <tr>
       <td>{{ forloop.counter }}</td>
       <td>&nbsp;{{ i.skillname }}</td>
-    <td><a href="/myapp/delete_skill/{{ i.id }}" onclick="return confirm('Are You Sure')">Delete</a> </td>
+    <td><a href="/myapp/delete_skill/{{ i.id }}" onclick="return confirm('Are You Sure')" class="btn btn-danger">Delete</a> </td>
     </tr>
       {% endfor %}
   </table>

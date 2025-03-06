@@ -10,7 +10,7 @@
 {% block body %}
 
 <form action="/myapp/add_facility_post/" method="post" enctype="multipart/form-data" name="form1" id="form1">
-  <table width="200" border="1" class="table table-borderd mt-4 table-dark -align-center ">
+  <table width="200" border="1" class="table table-borderd mt-4  -align-center ">
       {% csrf_token %}
     <tr>
       <td>FACILITY NAME</td>
@@ -26,7 +26,7 @@
     </tr>
     <tr>
       <td>&nbsp;</td>
-      <td><input type="submit" name="button" id="button" value="ADD" /></td>
+      <td><input type="submit" name="button" id="button" value="ADD" class="btn btn-success" /></td>
     </tr>
   </table>
 </form>

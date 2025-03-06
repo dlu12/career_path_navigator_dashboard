@@ -12,54 +12,54 @@
 
 <form id="form1" name="form1" method="post" action="/myapp/add_college_post/" enctype="multipart/form-data">
     {% csrf_token %}
-  <table width="200" border="1" class="table table-borderd mt-4 table-dark -align-center ">
+  <table  class="table table-borderd mt-4  -align-center ">
     <tr>
-      <td>NAME</td>
+      <th>NAME</th>
       <td><input type="text" name="textfield"  id="textfield" class="form-control" pattern="[A-Z a-z]*" required/></td>
     </tr>
     <tr>
-      <td>UNIVERSITY</td>
+      <th>UNIVERSITY</th>
       <td><input type="text" name="textfield2" id="textfield2" class="form-control" pattern="[A-Z a-z]*" required/></td>
     </tr>
     <tr>
-      <td>EMAIL</td>
+      <th>EMAIL</th>
       <td><input type="email" name="textfield3" id="textfield3" class="form-control"/></td>
     </tr>
     <tr>
-      <td>PHONE</td>
+      <th>PHONE</th>
       <td><input type="text" name="textfield4"  id="textfield4" class="form-control" pattern="[9876][0-9]{9}" required/></td>
     </tr>
     <tr>
-      <td>PHOTO</td>
+      <th>PHOTO</th>
       <td><input type="file" name="textfield5"  id="textfield5" class="form-control" required/></td>
     </tr>
     <tr>
-      <td>PLACE</td>
+      <th>PLACE</th>
       <td><input type="text" name="textfield6"  id="textfield6" class="form-control" pattern="[A-Z a-z]*" required/></td>
     </tr>
     <tr>
-      <td>POST</td>
+      <th>POST</th>
       <td><input type="text" name="textfield7"  id="textfield7" class="form-control" pattern="[A-Z a-z]*" required/></td>
     </tr>
     <tr>
-      <td>PIN</td>
+      <th>PIN</th>
       <td><input type="text" name="textfield8"  id="textfield8" class="form-control"  pattern="[0-9]{6}" required/></td>
     </tr>
     <tr>
-      <td>DISTRICT</td>
+      <th>DISTRICT</th>
       <td><input type="text" name="textfield9"  id="textfield9" class="form-control" pattern="[A-Z a-z]*" required/></td>
     </tr>
     <tr>
-      <td>STATE</td>
+      <th>STATE</th>
       <td><input type="text" name="textfield10"  id="textfield10" class="form-control" pattern="[A-Z a-z]*" required/></td>
     </tr>
     <tr>
-      <td>SINCE</td>
+      <th>SINCE</th>
       <td><input type="text" name="textfield11"  id="textfield11" class="form-control" required/></td>
     </tr>
     <tr>
-      <td>&nbsp;</td>
-      <td><input type="submit" name="button" id="button" value="ADD" /></td>
+      <th>&nbsp;</th>
+      <td><input type="submit" name="button" class="btn btn-success" id="button" value="ADD" /></td>
     </tr>
   </table>
 </form>

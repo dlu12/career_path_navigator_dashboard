@@ -2,7 +2,7 @@
 from django.contrib import admin
 from django.urls import path
 
-from myapp import views
+from myapp import views, rs3, ks2, ks
 
 urlpatterns = [
     path('admin/', admin.site.urls),
@@ -70,7 +70,7 @@ urlpatterns = [
     path('view_profile_get/', views.view_profile_get),
     path('view_rejected_request_get/', views.view_rejected_request_get),
     path('view_rejected_request_post/', views.view_rejected_request_post),
-    path('view_skill_company_get/', views.view_skill_company_get),
+    path('view_skill_company_get/<id>', views.view_skill_company_get),
     path('view_skill_company_post/', views.view_skill_company_post),
     path('view_vaccancy_company_get/', views.view_vaccancy_company_get),
     path('view_vaccancy_company_post/', views.view_vaccancy_company_post),
@@ -80,6 +80,8 @@ urlpatterns = [
     path('reject_request_get/<id>', views.reject_request_get),
     path('delete_vaccancy_get/<id>', views.delete_vaccancy_get),
     path('view_resume/<id>', views.view_resume),
+    path('add_vaccancy_company_skill_get/<id>', views.add_vaccancy_company_skill_get),
+    path('add_vaccany_company_skill_post/', views.add_vaccancy_company_skill_post),
 
 
     ###college
@@ -141,5 +143,13 @@ urlpatterns = [
     path('user_view_fees/', views.user_view_fees),
     path('user_viewprofile/', views.user_viewprofile),
     path('user_editprofile/', views.user_editprofile),
+    path('user_skill/', views.user_skill),
+    path('user_View_notification_post/', views.user_View_notification_post),
+
+
+    path('resume1/', rs3.create_resume),
+    path('resume2/', ks2.create_resume2),
+    path('resume3/', ks.create_resume3),
+
 
 ]

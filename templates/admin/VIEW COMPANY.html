@@ -12,23 +12,24 @@
 
 <form id="form1" name="form1" method="post" action="/myapp/view_company_post/">
     {% csrf_token %}
-  <table width="200" border="1" class="table table-borderd mt-4 table-dark -align-center">
+  <table class="px pull-left">
     <tr>
       <th scope="col"><input type="text" name="textfield" id="textfield" class="form-control" required/></th>
-      <th scope="col"><input type="submit" name="button" id="button" value="SEARCH" /></th>
+      <th scope="col"><input type="submit" name="button" class="btn btn-info" id="button" value="SEARCH" /></th>
     </tr>
   </table>
-  <table width="473" border="1" class="table table-borderd mt-4 table-dark -align-center">
+  <table border="1px" class="table table-borderd mt-4 -align-center">
     <tr>
-      <th scope="col">SLNO</th>
+      <th width="5" scope="col">SLNO</th>
       <th scope="col">LOGO</th>
       <th scope="col">NAME</th>
       <th scope="col">ADDRESS</th>
-      <th scope="col">EMAIL</th>
-      <th scope="col">PHONE</th>
+      <th scope="col">CONTACTS</th>
+{#      <th scope="col">PHONE</th>#}
       <th scope="col">SINCE</th>
       <th scope="col">PROOF</th>
       <th scope="col">PHOTO</th>
+      <th scope="col">&nbsp;</th>
       <th scope="col">&nbsp;</th>
     </tr>
       {% for i in data %}
@@ -37,14 +38,14 @@
       <td><img src="{{ i.logo }}" height="100" width="100"></td>
       <td>{{ i.name }}</td>
       <td>&nbsp;{{ i.place }}<br>{{ i.post }}<br>{{ i.pin }}<br>{{ i.district }}<br>{{ i.state }}</td>
-      <td>{{ i.email }}</td>
-      <td>&nbsp;{{ i.phone }}</td>
+      <td>{{ i.email }}<br>
+      {{ i.phone }}</td>
       <td>&nbsp;{{ i.since }}</td>
       <td>&nbsp;<img src="{{ i.proof }}" height="100" width="100"> </td>
         <td><img src="{{ i.photo}}" height="100" width="100"></td>
 
-      <td><a href="/myapp/approve_company/{{ i.LOGIN.id }}">APPROVE</a></td>
-      <td><a href="/myapp/reject_company/{{ i.LOGIN.id }}">REJECT</a></td>
+      <td><a href="/myapp/approve_company/{{ i.LOGIN.id }}" class="btn btn-success">APPROVE</a></td>
+      <td><a href="/myapp/reject_company/{{ i.LOGIN.id }}" class="btn btn-danger">REJECT</a></td>
     </tr>
       {% endfor %}
   </table>

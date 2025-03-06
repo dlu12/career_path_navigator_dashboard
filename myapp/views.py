@@ -302,6 +302,19 @@ def reject_company(request,id):
     savelogin=Login.objects.filter(id=id).update(type="rejected")
     return HttpResponse("<script>alert('rejected'); window.location = '/myapp/view_company_get/'</script>")
 
+def add_vaccancy_company_skill_get(request,id):
+    res = Skill.objects.all()
+    return render(request, 'company/ADD VACCANCY SKILL COMPANY.html', {'data': res,'id': id})
+
+def add_vaccancy_company_skill_post(request):
+    skills = request.POST['textfield']
+    id= request.POST['id']
+    vs=Vaccancy_Skill()
+    vs.VACCANCY = Vaccancy.objects.get(id=id)
+    vs.SKILL = Skill.objects.get(id=skills)
+    vs.save()
+    return HttpResponse("<script>alert('Added successfully'); window.location = '/myapp/view_vaccancy_company_get/'</script>")
+
 
 ###################################################
 
@@ -611,11 +624,12 @@ def view_rejected_request_post(request):
     obj = Vaccancy_Request.objects.filter(VACANCY__COMPANY__LOGIN_id=id, status='rejected',date__range=[fromdate,todate])
     return render(request, 'company/VIEW REJECTED REQUEST.html', {"data": obj})
 
-def view_skill_company_get(request):
+def view_skill_company_get(request,id):
     if request.session['lid'] == '':
         return HttpResponse("<script>alert('Please login'); window.location = '/myapp/login_get/'</script>")
-    data = Skill.objects.all()
+    data = Vaccancy_Skill.objects.filter(VACCANCY_id=id)
     return render(request,'company/VIEW SKILL.html',{"data":data})
+
 def view_skill_company_post(request):
     search=request.POST['textfield']
     data = Skill.objects.filter(skillname__icontains=search)
@@ -979,6 +993,8 @@ def user_signup(request):
     district = request.POST['district']
     state = request.POST['state']
     photo = request.POST['photo']
+    qualification = request.POST['qualification']
+    experience = request.POST['experience']
     password = request.POST['password']
     confirm_password = request.POST['confirmpassword']
 
@@ -1010,6 +1026,8 @@ def user_signup(request):
         cobj.place = place
         cobj.post = post
         cobj.pin = pin
+        cobj.qualification = qualification
+        cobj.experience = experience
         cobj.district = district
         cobj.state = state
         cobj.photo = photopath
@@ -1266,9 +1284,27 @@ def user_view_facility(request):
                   })
         return JsonResponse({"status": "ok",'data':l})
 
+def user_skill(request):
+    # vid=request.POST['vid']
+    obj = Skill.objects.all()
+    s=[]
+    for i in obj:
+        s.append({"id":i.id,
+                  "skillname":i.skillname,
+                  })
+    print(s)
+    return JsonResponse({"status": "ok", 'data': s})
 
-
-
+def user_View_notification_post(request):
+    obj = Notification.objects.all()
+    s = []
+    for i in obj:
+        s.append({"id": i.id,
+                  "date": i.date,
+                  "notification": i.notification,
+                  })
+    print(s)
+    return JsonResponse({"status": "ok", 'data': s})
 
 
 
