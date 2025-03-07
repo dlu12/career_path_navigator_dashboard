@@ -5,54 +5,13 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="baaa961b-72d1-496e-98b6-9e01ba78e90c" name="Default" comment="">
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/myapp/static/cv/20231108-173142jishnu.docx" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/myapp/static/cv/20231108-173531jishnu.docx" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/myapp/static/cv/20231108-173537jishnu.docx" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/myapp/static/cv/20231108-175358bb.docx" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/myapp/static/cv/20231109-085456bb.docx" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/myapp/static/cv/CVpj_tweet.pdf" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/myapp/static/cv/Rosu_CV.pdf" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/myapp/static/cv/out.pdf" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/myapp/static/cv/resume_model1.docx" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/myapp/static/cv/resume_model1.pdv" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/myapp/static/cv/veena_cv.pdf" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/myapp/ks.py" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/myapp/ks2.py" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/myapp/rs3.py" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/templates/company/ADD VACCANCY SKILL COMPANY.html" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/myapp/migrations/0001_initial.py" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/myapp/migrations/0002_remove_college_skill.py" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/myapp/migrations/0003_auto_20241203_1402.py" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/myapp/migrations/0004_auto_20241203_1441.py" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/myapp/migrations/0005_auto_20241203_1519.py" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/myapp/migrations/0006_remove_course_college.py" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/myapp/migrations/0007_remove_facilities_college.py" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/myapp/migrations/0008_department_college.py" afterPath="" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/career_path_navigator/settings.py" afterPath="$PROJECT_DIR$/career_path_navigator/settings.py" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/myapp/models.py" afterPath="$PROJECT_DIR$/myapp/models.py" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/myapp/urls.py" afterPath="$PROJECT_DIR$/myapp/urls.py" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/myapp/views.py" afterPath="$PROJECT_DIR$/myapp/views.py" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/templates/COLLEGE/ADD COURSE.html" afterPath="$PROJECT_DIR$/templates/COLLEGE/ADD COURSE.html" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/templates/COLLEGE/ADD DEPARTMENT.html" afterPath="$PROJECT_DIR$/templates/COLLEGE/ADD DEPARTMENT.html" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/templates/COLLEGE/ADD FACILITY.html" afterPath="$PROJECT_DIR$/templates/COLLEGE/ADD FACILITY.html" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/templates/COLLEGE/ADD FEE.html" afterPath="$PROJECT_DIR$/templates/COLLEGE/ADD FEE.html" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/templates/COLLEGE/COLLEGE CHANGE PASSWORD.html" afterPath="$PROJECT_DIR$/templates/COLLEGE/COLLEGE CHANGE PASSWORD.html" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/templates/COLLEGE/EDIT COURSE.html" afterPath="$PROJECT_DIR$/templates/COLLEGE/EDIT COURSE.html" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/templates/COLLEGE/EDIT DEPARTMENT.html" afterPath="$PROJECT_DIR$/templates/COLLEGE/EDIT DEPARTMENT.html" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/templates/COLLEGE/EDIT FACILITY.html" afterPath="$PROJECT_DIR$/templates/COLLEGE/EDIT FACILITY.html" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/templates/COLLEGE/EDIT FEE.html" afterPath="$PROJECT_DIR$/templates/COLLEGE/EDIT FEE.html" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/templates/COLLEGE/VIEW COLLEGE PROFILE.html" afterPath="$PROJECT_DIR$/templates/COLLEGE/VIEW COLLEGE PROFILE.html" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/templates/COLLEGE/VIEW COURSE COLLEGE.html" afterPath="$PROJECT_DIR$/templates/COLLEGE/VIEW COURSE COLLEGE.html" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/templates/COLLEGE/VIEW DEPARTMENT.html" afterPath="$PROJECT_DIR$/templates/COLLEGE/VIEW DEPARTMENT.html" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/templates/COLLEGE/VIEW FACILITY.html" afterPath="$PROJECT_DIR$/templates/COLLEGE/VIEW FACILITY.html" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/templates/COLLEGE/VIEW FEE.html" afterPath="$PROJECT_DIR$/templates/COLLEGE/VIEW FEE.html" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/templates/admin/ADD COLLEGE.html" afterPath="$PROJECT_DIR$/templates/admin/ADD COLLEGE.html" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/templates/admin/ADD NOTIFICATION.html" afterPath="$PROJECT_DIR$/templates/admin/ADD NOTIFICATION.html" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/templates/admin/ADD SKILL.html" afterPath="$PROJECT_DIR$/templates/admin/ADD SKILL.html" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/templates/admin/EDIT COLLEGE.html" afterPath="$PROJECT_DIR$/templates/admin/EDIT COLLEGE.html" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/templates/admin/EDIT NOTIFICATION.html" afterPath="$PROJECT_DIR$/templates/admin/EDIT NOTIFICATION.html" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/templates/admin/SEND REPLY.html" afterPath="$PROJECT_DIR$/templates/admin/SEND REPLY.html" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/templates/admin/VIEW APPROVED COMPANY.html" afterPath="$PROJECT_DIR$/templates/admin/VIEW APPROVED COMPANY.html" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/templates/admin/VIEW COLLEGE.html" afterPath="$PROJECT_DIR$/templates/admin/VIEW COLLEGE.html" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/templates/admin/VIEW COMPANY.html" afterPath="$PROJECT_DIR$/templates/admin/VIEW COMPANY.html" />
@@ -62,19 +21,12 @@
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/templates/admin/VIEW REJECTED COMPANY.html" afterPath="$PROJECT_DIR$/templates/admin/VIEW REJECTED COMPANY.html" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/templates/admin/VIEW SKILL.html" afterPath="$PROJECT_DIR$/templates/admin/VIEW SKILL.html" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/templates/admin/VIEW VACCANCY.html" afterPath="$PROJECT_DIR$/templates/admin/VIEW VACCANCY.html" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/templates/admin/change password.html" afterPath="$PROJECT_DIR$/templates/admin/change password.html" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/templates/company/ADD VACCANCY COMPANY.html" afterPath="$PROJECT_DIR$/templates/company/ADD VACCANCY COMPANY.html" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/templates/company/CHANGE PASSWORD COMPANY.html" afterPath="$PROJECT_DIR$/templates/company/CHANGE PASSWORD COMPANY.html" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/templates/company/EDIT PROFILE COMPANY.html" afterPath="$PROJECT_DIR$/templates/company/EDIT PROFILE COMPANY.html" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/templates/company/EDIT VACCANCY COMPANY.html" afterPath="$PROJECT_DIR$/templates/company/EDIT VACCANCY COMPANY.html" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/templates/company/SIGNUP COMPANY.html" afterPath="$PROJECT_DIR$/templates/company/SIGNUP COMPANY.html" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/templates/company/VIEW APPROVED REQUEST.html" afterPath="$PROJECT_DIR$/templates/company/VIEW APPROVED REQUEST.html" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/templates/company/VIEW PROFILE COMPANY.html" afterPath="$PROJECT_DIR$/templates/company/VIEW PROFILE COMPANY.html" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/templates/company/VIEW REJECTED REQUEST.html" afterPath="$PROJECT_DIR$/templates/company/VIEW REJECTED REQUEST.html" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/templates/company/VIEW SKILL.html" afterPath="$PROJECT_DIR$/templates/company/VIEW SKILL.html" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/templates/company/VIEW VACCANCY COMPANY.html" afterPath="$PROJECT_DIR$/templates/company/VIEW VACCANCY COMPANY.html" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/templates/company/VIEW VACCANCY REQUEST.html" afterPath="$PROJECT_DIR$/templates/company/VIEW VACCANCY REQUEST.html" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/templates/company/company_index.html" afterPath="$PROJECT_DIR$/templates/company/company_index.html" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="TRACKING_ENABLED" value="true" />
@@ -92,61 +44,59 @@
       <file leaf-file-name="models.py" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/myapp/models.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="124">
-              <caret line="55" column="18" lean-forward="false" selection-start-line="55" selection-start-column="6" selection-end-line="55" selection-end-column="18" />
+            <state relative-caret-position="281">
+              <caret line="129" column="10" lean-forward="false" selection-start-line="129" selection-start-column="4" selection-end-line="129" selection-end-column="10" />
               <folding />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="urls.py" pinned="false" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/myapp/urls.py">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="358">
-              <caret line="148" column="0" lean-forward="true" selection-start-line="148" selection-start-column="0" selection-end-line="148" selection-end-column="0" />
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="views.py" pinned="false" current-in-tab="false">
+      <file leaf-file-name="views.py" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/myapp/views.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="77">
-              <caret line="1297" column="31" lean-forward="false" selection-start-line="1297" selection-start-column="4" selection-end-line="1297" selection-end-column="31" />
+            <state relative-caret-position="182">
+              <caret line="1355" column="26" lean-forward="false" selection-start-line="1355" selection-start-column="19" selection-end-line="1355" selection-end-column="26" />
               <folding />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="rs3.py" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/myapp/rs3.py">
+      <file leaf-file-name="VIEW SKILL.html" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/templates/company/VIEW SKILL.html">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="877">
-              <caret line="166" column="14" lean-forward="true" selection-start-line="166" selection-start-column="14" selection-end-line="166" selection-end-column="14" />
+            <state relative-caret-position="300">
+              <caret line="12" column="87" lean-forward="false" selection-start-line="12" selection-start-column="87" selection-end-line="12" selection-end-column="87" />
               <folding />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="ks2.py" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/myapp/ks2.py">
+      <file leaf-file-name="VIEW COLLEGE PROFILE.html" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/templates/COLLEGE/VIEW COLLEGE PROFILE.html">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="6">
-              <caret line="98" column="20" lean-forward="true" selection-start-line="98" selection-start-column="20" selection-end-line="98" selection-end-column="20" />
+            <state relative-caret-position="400">
+              <caret line="16" column="30" lean-forward="false" selection-start-line="16" selection-start-column="30" selection-end-line="16" selection-end-column="30" />
               <folding />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="ks.py" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/myapp/ks.py">
+      <file leaf-file-name="VIEW VACCANCY REQUEST.html" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/templates/company/VIEW VACCANCY REQUEST.html">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="266">
-              <caret line="94" column="105" lean-forward="false" selection-start-line="94" selection-start-column="105" selection-end-line="94" selection-end-column="105" />
-              <folding>
-                <element signature="e#0#36#0" expanded="true" />
-              </folding>
+            <state relative-caret-position="75">
+              <caret line="33" column="25" lean-forward="true" selection-start-line="33" selection-start-column="25" selection-end-line="33" selection-end-column="25" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="urls.py" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/myapp/urls.py">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="206">
+              <caret line="149" column="34" lean-forward="false" selection-start-line="149" selection-start-column="10" selection-end-line="149" selection-end-column="34" />
+              <folding />
             </state>
           </provider>
         </entry>
@@ -162,9 +112,6 @@
   </component>
   <component name="FindInProjectRecents">
     <findStrings>
-      <find>view</find>
-      <find>add_course_post</find>
-      <find>edit_department_post</find>
       <find>edit_course_get</find>
       <find>signu</find>
       <find>user_viewapprovedcompany</find>
@@ -174,7 +121,6 @@
       <find>add_coures_post</find>
       <find>view_course_college_get</find>
       <find>Department</find>
-      <find>view_college_get</find>
       <find>view_course_get</find>
       <find>lib</find>
       <find>css</find>
@@ -192,6 +138,10 @@
       <find>u.</find>
       <find>resume3</find>
       <find>notification</find>
+      <find>view_college_get</find>
+      <find>user_View_notification_post</find>
+      <find>view_vaccancy_request_get</find>
+      <find>user_viewvaccancy</find>
     </findStrings>
     <replaceStrings>
       <replace>Uplift</replace>
@@ -204,54 +154,54 @@
     <option name="CHANGED_PATHS">
       <list>
         <option value="$PROJECT_DIR$/templates/company/signup_index.html" />
-        <option value="$PROJECT_DIR$/myapp/models.py" />
         <option value="$PROJECT_DIR$/career_path_navigator/settings.py" />
         <option value="$PROJECT_DIR$/templates/admin/ADD COLLEGE.html" />
-        <option value="$PROJECT_DIR$/templates/admin/VIEW COLLEGE.html" />
-        <option value="$PROJECT_DIR$/templates/admin/VIEW COMPANY.html" />
-        <option value="$PROJECT_DIR$/templates/admin/VIEW APPROVED COMPANY.html" />
-        <option value="$PROJECT_DIR$/templates/admin/VIEW REJECTED COMPANY.html" />
         <option value="$PROJECT_DIR$/templates/admin/ADD NOTIFICATION.html" />
-        <option value="$PROJECT_DIR$/templates/admin/VIEW NOTIFICATION.html" />
         <option value="$PROJECT_DIR$/templates/admin/ADD SKILL.html" />
-        <option value="$PROJECT_DIR$/templates/admin/VIEW SKILL.html" />
-        <option value="$PROJECT_DIR$/templates/admin/VIEW COMPLAINTS.html" />
         <option value="$PROJECT_DIR$/templates/admin/change password.html" />
         <option value="$PROJECT_DIR$/templates/admin/EDIT COLLEGE.html" />
         <option value="$PROJECT_DIR$/templates/admin/EDIT NOTIFICATION.html" />
         <option value="$PROJECT_DIR$/templates/admin/SEND REPLY.html" />
-        <option value="$PROJECT_DIR$/templates/admin/VIEW VACCANCY.html" />
-        <option value="$PROJECT_DIR$/templates/admin/VIEW COURSE.html" />
-        <option value="$PROJECT_DIR$/templates/company/VIEW PROFILE COMPANY.html" />
         <option value="$PROJECT_DIR$/templates/company/EDIT PROFILE COMPANY.html" />
         <option value="$PROJECT_DIR$/templates/company/CHANGE PASSWORD COMPANY.html" />
         <option value="$PROJECT_DIR$/templates/company/ADD VACCANCY COMPANY.html" />
         <option value="$PROJECT_DIR$/templates/company/EDIT VACCANCY COMPANY.html" />
-        <option value="$PROJECT_DIR$/templates/company/VIEW VACCANCY REQUEST.html" />
         <option value="$PROJECT_DIR$/templates/company/SIGNUP COMPANY.html" />
-        <option value="$PROJECT_DIR$/templates/company/VIEW APPROVED REQUEST.html" />
-        <option value="$PROJECT_DIR$/templates/company/VIEW REJECTED REQUEST.html" />
         <option value="$PROJECT_DIR$/templates/company/ADD VACCANCY SKILL COMPANY.html" />
-        <option value="$PROJECT_DIR$/templates/company/VIEW VACCANCY COMPANY.html" />
-        <option value="$PROJECT_DIR$/templates/company/VIEW SKILL.html" />
         <option value="$PROJECT_DIR$/templates/company/company_index.html" />
         <option value="$PROJECT_DIR$/templates/COLLEGE/VIEW COLLEGE PROFILE.html" />
         <option value="$PROJECT_DIR$/templates/COLLEGE/COLLEGE CHANGE PASSWORD.html" />
         <option value="$PROJECT_DIR$/templates/COLLEGE/ADD DEPARTMENT.html" />
-        <option value="$PROJECT_DIR$/templates/COLLEGE/VIEW DEPARTMENT.html" />
         <option value="$PROJECT_DIR$/templates/COLLEGE/EDIT DEPARTMENT.html" />
         <option value="$PROJECT_DIR$/templates/COLLEGE/ADD COURSE.html" />
-        <option value="$PROJECT_DIR$/templates/COLLEGE/VIEW COURSE COLLEGE.html" />
         <option value="$PROJECT_DIR$/templates/COLLEGE/EDIT COURSE.html" />
         <option value="$PROJECT_DIR$/templates/COLLEGE/ADD FACILITY.html" />
-        <option value="$PROJECT_DIR$/templates/COLLEGE/VIEW FACILITY.html" />
         <option value="$PROJECT_DIR$/templates/COLLEGE/EDIT FACILITY.html" />
         <option value="$PROJECT_DIR$/templates/COLLEGE/ADD FEE.html" />
-        <option value="$PROJECT_DIR$/templates/COLLEGE/VIEW FEE.html" />
         <option value="$PROJECT_DIR$/templates/COLLEGE/EDIT FEE.html" />
-        <option value="$PROJECT_DIR$/myapp/rs3.py" />
         <option value="$PROJECT_DIR$/myapp/ks2.py" />
         <option value="$PROJECT_DIR$/myapp/ks.py" />
+        <option value="$PROJECT_DIR$/myapp/rs3.py" />
+        <option value="$PROJECT_DIR$/templates/admin/VIEW APPROVED COMPANY.html" />
+        <option value="$PROJECT_DIR$/templates/admin/VIEW COLLEGE.html" />
+        <option value="$PROJECT_DIR$/templates/admin/VIEW COMPANY.html" />
+        <option value="$PROJECT_DIR$/templates/admin/VIEW COMPLAINTS.html" />
+        <option value="$PROJECT_DIR$/templates/admin/VIEW COURSE.html" />
+        <option value="$PROJECT_DIR$/templates/admin/VIEW NOTIFICATION.html" />
+        <option value="$PROJECT_DIR$/templates/admin/VIEW REJECTED COMPANY.html" />
+        <option value="$PROJECT_DIR$/templates/admin/VIEW SKILL.html" />
+        <option value="$PROJECT_DIR$/templates/admin/VIEW VACCANCY.html" />
+        <option value="$PROJECT_DIR$/templates/COLLEGE/VIEW COURSE COLLEGE.html" />
+        <option value="$PROJECT_DIR$/templates/COLLEGE/VIEW DEPARTMENT.html" />
+        <option value="$PROJECT_DIR$/templates/COLLEGE/VIEW FACILITY.html" />
+        <option value="$PROJECT_DIR$/templates/COLLEGE/VIEW FEE.html" />
+        <option value="$PROJECT_DIR$/templates/company/VIEW APPROVED REQUEST.html" />
+        <option value="$PROJECT_DIR$/templates/company/VIEW PROFILE COMPANY.html" />
+        <option value="$PROJECT_DIR$/templates/company/VIEW REJECTED REQUEST.html" />
+        <option value="$PROJECT_DIR$/templates/company/VIEW SKILL.html" />
+        <option value="$PROJECT_DIR$/templates/company/VIEW VACCANCY COMPANY.html" />
+        <option value="$PROJECT_DIR$/templates/company/VIEW VACCANCY REQUEST.html" />
+        <option value="$PROJECT_DIR$/myapp/models.py" />
         <option value="$PROJECT_DIR$/myapp/views.py" />
         <option value="$PROJECT_DIR$/myapp/urls.py" />
       </list>
@@ -286,7 +236,6 @@
     </navigator>
     <panes>
       <pane id="Scope" />
-      <pane id="Scratches" />
       <pane id="ProjectPane">
         <subPane>
           <PATH>
@@ -327,7 +276,7 @@
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
             <PATH_ELEMENT>
-              <option name="myItemId" value="COLLEGE" />
+              <option name="myItemId" value="company" />
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
           </PATH>
@@ -379,6 +328,7 @@
           </PATH>
         </subPane>
       </pane>
+      <pane id="Scratches" />
     </panes>
   </component>
   <component name="PropertiesComponent">
@@ -628,17 +578,17 @@
   <component name="ToolWindowManager">
     <frame x="-10" y="2" width="1938" height="1028" extended-state="0" />
     <layout>
-      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.33044422" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
+      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.23185265" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
       <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
       <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="7" side_tool="true" content_ui="tabs" />
       <window_info id="Database" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
+      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.35912937" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="10" side_tool="false" content_ui="tabs" />
       <window_info id="Python Console" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32889965" sideWeight="0.5" order="8" side_tool="false" content_ui="tabs" />
-      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.39903265" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Structure" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32285368" sideWeight="0.5" order="9" side_tool="false" content_ui="tabs" />
-      <window_info id="Favorites" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="true" content_ui="tabs" />
       <window_info id="Debug" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.4" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
+      <window_info id="Favorites" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="true" content_ui="tabs" />
       <window_info id="Data View" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
       <window_info id="Cvs" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
       <window_info id="Message" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
@@ -695,49 +645,6 @@
     <watches-manager />
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/templates/admin/ADD COLLEGE.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="312">
-          <caret line="61" column="68" lean-forward="true" selection-start-line="61" selection-start-column="45" selection-end-line="61" selection-end-column="68" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/templates/admin/VIEW COLLEGE.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-313">
-          <caret line="20" column="30" lean-forward="false" selection-start-line="20" selection-start-column="30" selection-end-line="20" selection-end-column="30" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/templates/admin/VIEW COMPANY.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="125">
-          <caret line="20" column="20" lean-forward="false" selection-start-line="20" selection-start-column="20" selection-end-line="20" selection-end-column="20" />
-          <folding>
-            <element signature="e#1181#1187#1#HTML" expanded="true" />
-            <element signature="e#1215#1221#1#HTML" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/templates/admin/VIEW APPROVED COMPANY.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="275">
-          <caret line="17" column="88" lean-forward="false" selection-start-line="17" selection-start-column="88" selection-end-line="17" selection-end-column="88" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/templates/admin/VIEW REJECTED COMPANY.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="312">
-          <caret line="14" column="20" lean-forward="true" selection-start-line="14" selection-start-column="20" selection-end-line="14" selection-end-column="20" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/templates/admin/ADD NOTIFICATION.html">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="408">
@@ -746,34 +653,10 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/templates/admin/VIEW NOTIFICATION.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="425">
-          <caret line="20" column="92" lean-forward="false" selection-start-line="20" selection-start-column="92" selection-end-line="20" selection-end-column="92" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/templates/admin/ADD SKILL.html">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="408">
           <caret line="20" column="91" lean-forward="false" selection-start-line="20" selection-start-column="91" selection-end-line="20" selection-end-column="91" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/templates/admin/VIEW SKILL.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="450">
-          <caret line="30" column="111" lean-forward="false" selection-start-line="30" selection-start-column="111" selection-end-line="30" selection-end-column="111" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/templates/admin/VIEW COMPLAINTS.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="325">
-          <caret line="40" column="79" lean-forward="false" selection-start-line="40" selection-start-column="79" selection-end-line="40" selection-end-column="79" />
           <folding />
         </state>
       </provider>
@@ -806,30 +689,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="350">
           <caret line="14" column="63" lean-forward="false" selection-start-line="14" selection-start-column="63" selection-end-line="14" selection-end-column="63" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/templates/admin/VIEW VACCANCY.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="200">
-          <caret line="20" column="63" lean-forward="false" selection-start-line="20" selection-start-column="63" selection-end-line="20" selection-end-column="63" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/templates/admin/VIEW COURSE.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="50">
-          <caret line="20" column="63" lean-forward="false" selection-start-line="20" selection-start-column="63" selection-end-line="20" selection-end-column="63" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/templates/company/VIEW PROFILE COMPANY.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="400">
-          <caret line="55" column="68" lean-forward="true" selection-start-line="55" selection-start-column="68" selection-end-line="55" selection-end-column="68" />
           <folding />
         </state>
       </provider>
@@ -873,30 +732,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/templates/company/VIEW APPROVED REQUEST.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="50">
-          <caret line="14" column="8" lean-forward="false" selection-start-line="14" selection-start-column="8" selection-end-line="14" selection-end-column="8" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/templates/company/VIEW REJECTED REQUEST.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="375">
-          <caret line="21" column="9" lean-forward="true" selection-start-line="21" selection-start-column="9" selection-end-line="21" selection-end-column="9" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/templates/company/VIEW VACCANCY REQUEST.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="350">
-          <caret line="14" column="40" lean-forward="false" selection-start-line="14" selection-start-column="40" selection-end-line="14" selection-end-column="40" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/myapp/apps.py">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="0">
@@ -919,34 +754,10 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/templates/company/VIEW VACCANCY COMPANY.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="1100">
-          <caret line="44" column="36" lean-forward="false" selection-start-line="44" selection-start-column="36" selection-end-line="44" selection-end-column="36" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/templates/company/VIEW SKILL.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="700">
-          <caret line="28" column="27" lean-forward="false" selection-start-line="28" selection-start-column="27" selection-end-line="28" selection-end-column="27" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/templates/company/company_index.html">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="350">
           <caret line="104" column="25" lean-forward="false" selection-start-line="99" selection-start-column="24" selection-end-line="104" selection-end-column="25" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/templates/COLLEGE/VIEW COLLEGE PROFILE.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-720">
-          <caret line="16" column="30" lean-forward="true" selection-start-line="16" selection-start-column="30" selection-end-line="16" selection-end-column="30" />
           <folding />
         </state>
       </provider>
@@ -967,14 +778,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/templates/COLLEGE/VIEW DEPARTMENT.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="25">
-          <caret line="19" column="64" lean-forward="false" selection-start-line="19" selection-start-column="64" selection-end-line="19" selection-end-column="64" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/templates/COLLEGE/EDIT DEPARTMENT.html">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="350">
@@ -987,14 +790,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="308">
           <caret line="33" column="92" lean-forward="false" selection-start-line="33" selection-start-column="92" selection-end-line="33" selection-end-column="92" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/templates/COLLEGE/VIEW COURSE COLLEGE.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="450">
-          <caret line="45" column="11" lean-forward="true" selection-start-line="45" selection-start-column="11" selection-end-line="45" selection-end-column="11" />
           <folding />
         </state>
       </provider>
@@ -1015,14 +810,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/templates/COLLEGE/VIEW FACILITY.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="200">
-          <caret line="15" column="9" lean-forward="false" selection-start-line="15" selection-start-column="9" selection-end-line="15" selection-end-column="9" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/templates/COLLEGE/EDIT FACILITY.html">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="575">
@@ -1039,14 +826,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/templates/COLLEGE/VIEW FEE.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="400">
-          <caret line="37" column="73" lean-forward="false" selection-start-line="37" selection-start-column="73" selection-end-line="37" selection-end-column="73" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/templates/COLLEGE/EDIT FEE.html">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="375">
@@ -1057,50 +836,214 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/myapp/ks2.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="6">
-          <caret line="98" column="20" lean-forward="true" selection-start-line="98" selection-start-column="20" selection-end-line="98" selection-end-column="20" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/myapp/rs3.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="877">
-          <caret line="166" column="14" lean-forward="true" selection-start-line="166" selection-start-column="14" selection-end-line="166" selection-end-column="14" />
-          <folding />
+        <state relative-caret-position="2275">
+          <caret line="98" column="20" lean-forward="false" selection-start-line="98" selection-start-column="20" selection-end-line="98" selection-end-column="20" />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/myapp/ks.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="266">
+        <state relative-caret-position="2100">
           <caret line="94" column="105" lean-forward="false" selection-start-line="94" selection-start-column="105" selection-end-line="94" selection-end-column="105" />
-          <folding>
-            <element signature="e#0#36#0" expanded="true" />
-          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/myapp/rs3.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-448">
+          <caret line="164" column="28" lean-forward="true" selection-start-line="164" selection-start-column="28" selection-end-line="164" selection-end-column="28" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/templates/admin/VIEW APPROVED COMPANY.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="200">
+          <caret line="14" column="80" lean-forward="true" selection-start-line="14" selection-start-column="80" selection-end-line="14" selection-end-column="80" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/templates/admin/VIEW COLLEGE.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="125">
+          <caret line="12" column="81" lean-forward="false" selection-start-line="12" selection-start-column="81" selection-end-line="12" selection-end-column="81" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/templates/admin/VIEW COMPANY.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="225">
+          <caret line="12" column="81" lean-forward="false" selection-start-line="12" selection-start-column="81" selection-end-line="12" selection-end-column="81" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/templates/admin/VIEW COMPLAINTS.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="225">
+          <caret line="12" column="84" lean-forward="false" selection-start-line="12" selection-start-column="84" selection-end-line="12" selection-end-column="84" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/templates/admin/VIEW COURSE.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="225">
+          <caret line="12" column="80" lean-forward="false" selection-start-line="12" selection-start-column="80" selection-end-line="12" selection-end-column="80" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/templates/admin/VIEW NOTIFICATION.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="210">
+          <caret line="12" column="86" lean-forward="false" selection-start-line="12" selection-start-column="86" selection-end-line="12" selection-end-column="86" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/templates/admin/VIEW REJECTED COMPANY.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="300">
+          <caret line="12" column="90" lean-forward="false" selection-start-line="12" selection-start-column="90" selection-end-line="12" selection-end-column="90" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/templates/admin/VIEW SKILL.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="260">
+          <caret line="12" column="79" lean-forward="false" selection-start-line="12" selection-start-column="79" selection-end-line="12" selection-end-column="79" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/templates/admin/VIEW VACCANCY.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="225">
+          <caret line="12" column="82" lean-forward="false" selection-start-line="12" selection-start-column="82" selection-end-line="12" selection-end-column="82" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/templates/COLLEGE/VIEW COURSE COLLEGE.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="210">
+          <caret line="13" column="88" lean-forward="false" selection-start-line="13" selection-start-column="88" selection-end-line="13" selection-end-column="88" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/templates/COLLEGE/VIEW DEPARTMENT.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="125">
+          <caret line="14" column="84" lean-forward="false" selection-start-line="14" selection-start-column="84" selection-end-line="14" selection-end-column="84" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/templates/COLLEGE/VIEW FACILITY.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="150">
+          <caret line="13" column="82" lean-forward="false" selection-start-line="13" selection-start-column="82" selection-end-line="13" selection-end-column="82" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/templates/COLLEGE/VIEW FEE.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="125">
+          <caret line="14" column="77" lean-forward="false" selection-start-line="14" selection-start-column="77" selection-end-line="14" selection-end-column="77" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/templates/company/VIEW APPROVED REQUEST.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="150">
+          <caret line="12" column="90" lean-forward="false" selection-start-line="12" selection-start-column="90" selection-end-line="12" selection-end-column="90" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/templates/company/VIEW PROFILE COMPANY.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="300">
+          <caret line="12" column="43" lean-forward="false" selection-start-line="12" selection-start-column="43" selection-end-line="12" selection-end-column="43" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/templates/company/VIEW REJECTED REQUEST.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="300">
+          <caret line="12" column="90" lean-forward="false" selection-start-line="12" selection-start-column="90" selection-end-line="12" selection-end-column="90" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/templates/company/VIEW RESUME.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="0">
+          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/templates/company/VIEW SKILL.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="300">
+          <caret line="12" column="87" lean-forward="false" selection-start-line="12" selection-start-column="87" selection-end-line="12" selection-end-column="87" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/templates/company/VIEW VACCANCY COMPANY.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="325">
+          <caret line="13" column="90" lean-forward="false" selection-start-line="13" selection-start-column="90" selection-end-line="13" selection-end-column="90" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/templates/COLLEGE/VIEW COLLEGE PROFILE.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="400">
+          <caret line="16" column="30" lean-forward="false" selection-start-line="16" selection-start-column="30" selection-end-line="16" selection-end-column="30" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/templates/company/VIEW VACCANCY REQUEST.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="75">
+          <caret line="33" column="25" lean-forward="true" selection-start-line="33" selection-start-column="25" selection-end-line="33" selection-end-column="25" />
+          <folding />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/myapp/models.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="124">
-          <caret line="55" column="18" lean-forward="false" selection-start-line="55" selection-start-column="6" selection-end-line="55" selection-end-column="18" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/myapp/views.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="77">
-          <caret line="1297" column="31" lean-forward="false" selection-start-line="1297" selection-start-column="4" selection-end-line="1297" selection-end-column="31" />
+        <state relative-caret-position="281">
+          <caret line="129" column="10" lean-forward="false" selection-start-line="129" selection-start-column="4" selection-end-line="129" selection-end-column="10" />
           <folding />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/myapp/urls.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="358">
-          <caret line="148" column="0" lean-forward="true" selection-start-line="148" selection-start-column="0" selection-end-line="148" selection-end-column="0" />
+        <state relative-caret-position="206">
+          <caret line="149" column="34" lean-forward="false" selection-start-line="149" selection-start-column="10" selection-end-line="149" selection-end-column="34" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/myapp/views.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="182">
+          <caret line="1355" column="26" lean-forward="false" selection-start-line="1355" selection-start-column="19" selection-end-line="1355" selection-end-column="26" />
           <folding />
         </state>
       </provider>

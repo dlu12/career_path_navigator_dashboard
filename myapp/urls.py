@@ -134,6 +134,7 @@ urlpatterns = [
     path('user_deleteownskill/<id>',views.user_deleteownskill),
     path('user_viewapprovedcompany/',views.user_viewapprovedcompany),
     path('user_viewvaccancy/',views.user_viewvaccancy),
+    path('user_viewallvaccancy/',views.user_viewallvaccancy),
     path('user_send_request/<id>',views.user_send_request),
     path('user_send_complaint/', views.user_send_complaint),
     path('user_view_reply/', views.user_view_reply),
@@ -145,6 +146,8 @@ urlpatterns = [
     path('user_editprofile/', views.user_editprofile),
     path('user_skill/', views.user_skill),
     path('user_View_notification_post/', views.user_View_notification_post),
+    path('user_applyjob/', views.user_applyjob),
+    path('user_View_jobRequest_get/', views.user_View_jobRequest_get),
 
 
     path('resume1/', rs3.create_resume),

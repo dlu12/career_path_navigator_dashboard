@@ -648,8 +648,9 @@ def view_vaccancy_company_post(request):
 
 def view_vaccancy_request_get(request,id):
     # id= request.session['lid']
-    obj=Vaccancy_Request.objects.filter(VACANCY_id=id,status = 'pending')
+    obj=JobRequest.objects.filter(VACANCY_id=id,status = 'pending')
     request.session['rid']=id
+    print(obj,'=-=-=-=-=-=-=-=-')
     return render(request,'company/VIEW VACCANCY REQUEST.html',{'data':obj})
 def view_vaccancy_request_post(request):
     fromdate = request.POST['textfield']
@@ -1106,14 +1107,14 @@ def user_editprofile(request):
 
 
 def user_addownskill(request):
-    skill = request.POST['skill']
+    skl = request.POST['skill']
     lid = request.POST['lid']
 
 
-    print(skill,lid,"=====")
+    print(skl,lid,"=====")
 
     obj= OwnSkill()
-    obj.skill= skill
+    obj.SKILL= Skill.objects.get(id=skl)
     obj.USER= User.objects.get(LOGIN__id=lid)
     obj.save()
     return JsonResponse({"status": "ok"})
@@ -1123,7 +1124,7 @@ def user_viewownskill(request):
     l=[]
     for i in obj :
         l.append({"id":i.id,
-                  "skill":i.skill,
+                  "skill":i.SKILL.skillname,
                   })
     return JsonResponse({"status": "Ok", 'data': l})
 
@@ -1167,6 +1168,23 @@ def user_viewapprovedcompany(request):
 
 
 def user_viewvaccancy(request):
+    cid = request.POST['cid']
+    obj = Vaccancy.objects.filter(COMPANY_id=cid)
+
+    l = []
+    for i in obj:
+        l.append({"id": i.id,
+                  "vaccancy_no": i.vaccancy_no,
+                  "job_title": i.job_title,
+                  "start_date": i.start_date,
+                  "end_date": i.end_date,
+                  "experience": i.experience,
+                  "company" : i.COMPANY.name,
+                  })
+
+    return JsonResponse({"status": "Ok", 'data': l})
+
+def user_viewallvaccancy(request):
     obj = Vaccancy.objects.all()
 
     l = []
@@ -1306,7 +1324,41 @@ def user_View_notification_post(request):
     print(s)
     return JsonResponse({"status": "ok", 'data': s})
 
+def user_applyjob(request):
+    lid=request.POST['lid']
+    vid=request.POST['vid']
+    resume = request.FILES['resume']
 
+
+
+    date = datetime.now().strftime('%Y%m%d-%H%M%S') + ".pdf"
+    fs = FileSystemStorage()
+    fs.save(date, resume)
+    path = fs.url(date)
+    cobj = JobRequest()
+
+    cobj.status='pending'
+    cobj.file = path
+    cobj.USER = User.objects.get(LOGIN_id=lid)
+    cobj.VACANCY_id = vid
+    cobj.date=datetime.now().today()
+
+    cobj.save()
+
+    return JsonResponse({"status": "ok"})
+
+def user_View_jobRequest_get(request):
+    obj = JobRequest.objects.all()
+    s = []
+    for i in obj:
+        s.append({"id": i.id,
+                  "date": i.date,
+                  "VACANCY": i.VACANCY.job_title,
+                  "COMPANY": i.VACANCY.COMPANY.name,
+                  "status": i.status,
+                                    })
+    print(s)
+    return JsonResponse({"status": "ok", 'data': s})
 
 
 

@@ -10,7 +10,7 @@
 {% extends "company/company_index.html" %}
 {% block body %}
 
-<form action="/myapp/view_profile_post/" method="post" enctype="multipart/form-data" name="form1" id="form1">
+<form action="/myapp/view_profile_post/#abc" method="post" enctype="multipart/form-data" name="form1" id="form1">
   {% csrf_token %}
     <table width="200" border="1" class="table table-borderd mt-4 -align-center ">
     <tr>

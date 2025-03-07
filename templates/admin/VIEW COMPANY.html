@@ -10,7 +10,7 @@
 {% extends "admin/admin_index.html" %}
 {% block body %}
 
-<form id="form1" name="form1" method="post" action="/myapp/view_company_post/">
+<form id="form1" name="form1" method="post" action="/myapp/view_company_post/#abc">
     {% csrf_token %}
   <table class="px pull-left">
     <tr>
