@@ -218,11 +218,6 @@ def send_reply_post(request):
     res=Complaint.objects.filter(id=id).update(reply=reply,status="replied")
     return HttpResponse("<script>alert('replied'); window.location = '/myapp/view_complaints_get/'</script>")
 
-
-
-
-
-
 def view_skill_get(request):
     if request.session['lid'] == '':
         return HttpResponse("<script>alert('Please login'); window.location = '/myapp/login_get/'</script>")
@@ -245,6 +240,21 @@ def view_college_post(request):
     search=request.POST['textfield']
     res = College.objects.filter(name__icontains=search)
     return render(request, 'admin/VIEW COLLEGE.html', {'data': res})
+
+# def add_courserec_get(request):
+#     a = Course.objects.all()
+#     return render(request, 'admin/ADD COURSEREC.html', {"data": a})
+#
+# def add_courserec_post(request):
+#     preference = request.POST['textfield']
+#     course = request.POST['select']
+#     print(course, preference)
+#     a = Interest()
+#     a.COURSE_id = course
+#     a.preference = preference
+#     a.save()
+#     return HttpResponse(
+#             "<script>alert('add successfully'); window.location = '/myapp/admin_home/'</script>")
 
 
 ################company view
@@ -585,22 +595,22 @@ def signup_company_post(request):
 
 def view_approved_request_get(request):
     id = request.session['lid']
-    obj = Vaccancy_Request.objects.filter(VACANCY__COMPANY__LOGIN_id=id, status='approved')
+    obj = JobRequest.objects.filter(VACANCY__COMPANY__LOGIN_id=id, status='approved')
     return render(request,'company/VIEW APPROVED REQUEST.html',{"data":obj})
 
 def view_approved_request_post(request):
     fromdate=request.POST['textfield']
     todate=request.POST['textfield2']
     id = request.session['lid']
-    obj = Vaccancy_Request.objects.filter(VACANCY__COMPANY__LOGIN_id=id, status='approved',date__range=[fromdate,todate])
+    obj = JobRequest.objects.filter(VACANCY__COMPANY__LOGIN_id=id, status='approved',date__range=[fromdate,todate])
     return render(request, 'company/VIEW APPROVED REQUEST.html', {"data": obj})
 
 def approve_request_get(request,id):
-    Vaccancy_Request.objects.filter(id=id).update(status= "approved")
+    JobRequest.objects.filter(id=id).update(status= "approved")
     return HttpResponse("<script>alert('APPROVED'); window.location = '/myapp/view_approved_request_get/'</script>")
 
 def reject_request_get(request,id):
-    Vaccancy_Request.objects.filter(id=id).update(status= "rejected")
+    JobRequest.objects.filter(id=id).update(status= "rejected")
     return HttpResponse("<script>alert('REJECT'); window.location = '/myapp/view_rejected_request_get/'</script>")
 
 
@@ -694,17 +704,19 @@ def college_home(request):
 
 
 def add_course_get(request):
-    a=Department.objects.all()
+    a=Department.objects.filter(COLLEGE__LOGIN_id=request.session['lid'])
     return render(request,'COLLEGE/ADD COURSE.html',{"data":a})
 
 def add_course_post(request):
     course_name=request.POST['textfield']
     semester=request.POST['textfield2']
+    preference=request.POST['textfield3']
     id=request.POST['select']
     print(course_name,semester,id)
     a=Course()
     a.course_name=course_name
     a.semester=semester
+    a.preference=preference
     a.DEPARTMENT_id=id
     a.save()
     return HttpResponse(
@@ -746,6 +758,7 @@ def add_facility_post(request):
     a.facility_name=facility_name
     a.details=details
     a.photo=path
+    a.COLLEGE=College.objects.get(LOGIN=request.session['lid'])
     a.save()
 
     return HttpResponse(
@@ -753,7 +766,8 @@ def add_facility_post(request):
 
 
 def add_fee_get(request):
-    a=Course.objects.all()
+    a=Course.objects.filter(DEPARTMENT__COLLEGE__LOGIN_id=request.session['lid'])
+    # a=Course.objects.all()
     return render(request,'COLLEGE/ADD FEE.html',{"data":a})
 
 def add_fee_post(request):
@@ -775,18 +789,20 @@ def add_fee_post(request):
 
 def edit_course_get(request,id):
     a=Course.objects.get(id=id)
-    a1=Department.objects.all()
+    a1=Department.objects.filter(COLLEGE__LOGIN_id=request.session['lid'])
     return render(request,'COLLEGE/EDIT COURSE.html',{"data":a,"data1":a1})
 
 def edit_course_post(request):
     course_name = request.POST['textfield']
     semester = request.POST['textfield2']
+    preference = request.POST['textfield3']
     id = request.POST['select']
     idd = request.POST['id']
 
     a = Course.objects.get(id=idd)
     a.course_name = course_name
     a.semester = semester
+    a.preference = preference
     a.DEPARTMENT_id = id
     a.save()
     return HttpResponse(
@@ -843,6 +859,7 @@ def edit_facility_post(request):
 
     a.facility_name = facility_name
     a.details = details
+    a.COLLEGE=College.objects.get(LOGIN=request.session['lid'])
     a.save()
 
     return HttpResponse(
@@ -858,7 +875,7 @@ def delete_facility(request,id):
 
 def edit_fee_get(request,id):
     a=FeeStruct.objects.get(id=id)
-    a1=Course.objects.all()
+    a1=Course.objects.filter(DEPARTMENT__COLLEGE__LOGIN_id=request.session['lid'])
     return render(request,'COLLEGE/EDIT FEE.html',{"data":a,"data1":a1})
 
 def edit_fee_post(request):
@@ -900,41 +917,42 @@ def view_course_college_get(request):
 
 def view_course_college_post(request):
     search = request.POST['textfield']
-    a = Course.objects.filter(course_name__icontains=search)
+    a = Course.objects.filter(course_name__icontains=search,DEPARTMENT__COLLEGE__LOGIN_id=request.session['lid'])
     return render(request, 'COLLEGE/VIEW COURSE COLLEGE.html',{"data":a})
 
 
 def view_department_get(request):
-    a=Department.objects.all()
+    a=Department.objects.filter(COLLEGE__LOGIN_id=request.session['lid'])
     return render(request,'COLLEGE/VIEW DEPARTMENT.html',{"data":a})
 
 def view_department_post(request):
     search=request.POST['textfield']
-    a=Department.objects.filter(department_name__icontains=search)
+    a=Department.objects.filter(department_name__icontains=search,COLLEGE__LOGIN_id=request.session['lid'])
     return render(request,'COLLEGE/VIEW DEPARTMENT.html',{"data":a})
 
 
 
 
 def view_facility_get(request):
-    a=Facilities.objects.all()
+    a=Facilities.objects.filter(COLLEGE__LOGIN_id=request.session['lid'])
     return render(request,'COLLEGE/VIEW FACILITY.html',{"data":a})
 
 def view_facility_post(request):
     search = request.POST['textfield']
-    a = Facilities.objects.filter(facility_name__icontains=search)
+    a = Facilities.objects.filter(facility_name__icontains=search,COLLEGE__LOGIN_id=request.session['lid'])
     return render(request,'COLLEGE/VIEW FACILITY.html',{"data":a})
 
 
 
 
 def view_fee_get(request):
-    a=FeeStruct.objects.all()
+    # a=FeeStruct.objects.filter(COURSE__DEPARTMENT__LOGIN_id=request.session['lid'])
+    a=FeeStruct.objects.filter(COURSE__DEPARTMENT__COLLEGE__LOGIN_id=request.session['lid'])
     return render(request,'COLLEGE/VIEW FEE.html',{"data":a})
 
 def view_fee_post(request):
     search = request.POST['textfield']
-    a = FeeStruct.objects.filter(fees__icontains=search)
+    a = FeeStruct.objects.filter(fees__icontains=search,COURSE__DEPARTMENT__LOGIN_id=request.session['lid'])
     return render(request,'COLLEGE/VIEW FEE.html',{"data":a})
 
 
@@ -1000,15 +1018,15 @@ def user_signup(request):
     confirm_password = request.POST['confirmpassword']
 
     if Login.objects.filter(username=email).exists():
-        return JsonResponse({"status": "Ok"})
+        return JsonResponse({"status": "email"})
 
     if password == confirm_password:
         from datetime import datetime
         import base64
         date = datetime.now().strftime('%Y%m%d-%H%M%S') + "1.jpg"
         a = base64.b64decode(photo)
-        fs= open("C:\\Users\\Lenovo\\PycharmProjects\\career_path_navigator\\media\\User\\" + date, "wb")
-        photopath = '/media/user/' + date
+        fs= open("C:\\Users\\Lenovo\\PycharmProjects\\career_path_navigator\\media\\" + date, "wb")
+        photopath = '/media/' + date
         fs.write(a)
         fs.close()
 
@@ -1073,37 +1091,39 @@ def user_editprofile(request):
 
     cobj = User.objects.get(LOGIN_id=lid)
 
-    if Login.objects.filter(username=email).exists():
-        if len(photo) > 0:
-            from datetime import datetime
-            import base64
-            date = datetime.now().strftime('%Y%m%d-%H%M%S') + "1.jpg"
-            a = base64.b64decode(photo)
-            fs = open("C:\\Users\\Lenovo\\PycharmProjects\\career_path_navigator\\media\\User\\" + date, "wb")
-            photopath = '/media/user/' + date
-
-            fs.write(a)
-            fs.close()
-            cobj.photo = photopath
-            cobj.save()
-
-        lobj = Login.objects.get(id=lid)
-        lobj.username = email
-        lobj.save()
-
-
-        cobj.name = name
-        cobj.email = email
-        cobj.phone = phone
-        cobj.dob = dob
-        cobj.gender = gender
-        cobj.place = place
-        cobj.post = post
-        cobj.pin = pin
-        cobj.district = district
-        cobj.state = state
+    # if Login.objects.filter(username=email).exists():
+    if len(photo) > 0:
+        from datetime import datetime
+        import base64
+        date = datetime.now().strftime('%Y%m%d-%H%M%S') + "1.jpg"
+        a = base64.b64decode(photo)
+        fs = open("C:\\Users\\Lenovo\\PycharmProjects\\career_path_navigator\\media\\" + date, "wb")
+        photopath = '/media/' + date
+        fs.write(a)
+        fs.close()
+        cobj.photo = photopath
         cobj.save()
-        return JsonResponse({"status": "ok"})
+
+    lobj = Login.objects.get(id=lid)
+    lobj.username = email
+    lobj.save()
+
+
+    cobj.name = name
+    cobj.email = email
+    cobj.phone = phone
+    cobj.dob = dob
+    cobj.gender = gender
+    cobj.place = place
+    cobj.post = post
+    cobj.pin = pin
+    cobj.district = district
+    cobj.state = state
+    cobj.save()
+    return JsonResponse({"status": "ok"})
+
+
+
 
 
 def user_addownskill(request):
@@ -1270,16 +1290,147 @@ def user_view_course(request):
     obj = Course.objects.all()
     l = []
     for i in obj:
-        l.append({"id": i.id,
+        l.append({
                   "course_name": i.course_name,
                   "semester": i.semester,
                   'department':i.DEPARTMENT.department_name,
+                  'preference':i.preference
                   })
-        return JsonResponse({"status": "ok",'data':l})
+        print(l)
+    return JsonResponse({"status": "ok",'data':l})
+
+
+
+
+
+
+# def user_view_course_rec(request):
+#     import ast
+#     import pandas as pd
+#     from sklearn.model_selection import train_test_split
+#     from sklearn.preprocessing import LabelEncoder
+#     prefer = request.POST.get('prefer', '[]')  # Get preference, default to empty list
+#     try:
+#         # Convert preference string to list
+#         prefer_list = ast.literal_eval(prefer) if isinstance(prefer, str) else prefer
+#     except (ValueError, SyntaxError):
+#         return JsonResponse({"status": "error", "message": "Invalid preference format"})
+#
+#     # Fetch all courses
+#     courses = Course.objects.all()
+#
+#     # Prepare dataset
+#     data = []
+#     for course in courses:
+#         data.append({
+#             "course_name": course.course_name,
+#             "semester": course.semester,
+#             "department": course.DEPARTMENT.department_name,
+#             "preference": course.preference
+#         })
+#
+#     # Convert data to DataFrame
+#     df = pd.DataFrame(data)
+#
+#     # Encode categorical features
+#     le_department = LabelEncoder()
+#     df['department_encoded'] = le_department.fit_transform(df['department'])
+#
+#     le_preference = LabelEncoder()
+#     df['preference_encoded'] = le_preference.fit_transform(df['preference'])
+#
+#     # Features and target
+#     X = df[['semester', 'department_encoded']]
+#     y = df['preference_encoded']
+#
+#     # Train Random Forest
+#     X_train, X_test, y_train, y_test = train_test_split(X, y, test_size=0.2, random_state=42)
+#     model = RandomForestClassifier(n_estimators=100, random_state=42)
+#     model.fit(X_train, y_train)
+#
+#     # Predict courses based on user preferences
+#     recommended_courses = df[df['preference'].isin(prefer_list)]
+#
+#     # Response data
+#     l = []
+#     for _, row in recommended_courses.iterrows():
+#         l.append({
+#             "course_name": row['course_name'],
+#             "semester": row['semester'],
+#             "department": row['department']
+#         })
+#
+#     return JsonResponse({"status": "ok", 'data': l})
+#
+#
+from django.http import JsonResponse
+import json
+import pandas as pd
+from sklearn.model_selection import train_test_split
+from sklearn.preprocessing import LabelEncoder
+from sklearn.ensemble import RandomForestClassifier
+
+def user_view_course_rec(request):
+    prefer = request.POST.get('prefer', '[]')
+    try:
+        # Convert the JSON string to a Python list
+        prefer_list = json.loads(prefer)
+    except (ValueError, json.JSONDecodeError):
+        return JsonResponse({"status": "error", "message": "Invalid preference format"})
+
+    # Fetch all courses (assuming Course is already imported and configured)
+    courses = Course.objects.all()
+
+    # Prepare data for the model
+    data = []
+    for course in courses:
+        data.append({
+            "course_name": course.course_name,
+            "semester": course.semester,
+            "department": course.DEPARTMENT.department_name,
+            "preference": course.preference
+        })
+
+    df = pd.DataFrame(data)
+    if df.empty:
+        return JsonResponse({"status": "error", "message": "No courses found"})
+
+    # Encode categorical features
+    le_department = LabelEncoder()
+    df['department_encoded'] = le_department.fit_transform(df['department'])
+
+    le_preference = LabelEncoder()
+    df['preference_encoded'] = le_preference.fit_transform(df['preference'])
+
+    # Define features and target
+    X = df[['semester', 'department_encoded']]
+    y = df['preference_encoded']
+
+    # Train the Random Forest Classifier (example use)
+    X_train, X_test, y_train, y_test = train_test_split(X, y, test_size=0.2, random_state=42)
+    model = RandomForestClassifier(n_estimators=100, random_state=42)
+    model.fit(X_train, y_train)
+
+    # Filter recommended courses based on the user's preference list
+    recommended_courses = df[df['preference'].isin(prefer_list)]
+
+    # Prepare response data
+    response_data = []
+    for _, row in recommended_courses.iterrows():
+        response_data.append({
+            "course_name": row['course_name'],
+            "semester": row['semester'],
+            "department": row['department']
+        })
+
+    return JsonResponse({"status": "ok", "data": response_data})
+
+
 
 
 def user_view_fees(request):
-    obj = FeeStruct.objects.all()
+    cid=request.POST['cid']
+    obj = FeeStruct.objects.filter(COURSE__DEPARTMENT__COLLEGE_id=cid)
     l = []
     for i in obj:
         l.append({"id": i.id,
@@ -1287,12 +1438,13 @@ def user_view_fees(request):
                   "sem": i.sem,
                   'course':i.COURSE.course_name,
                   })
-        return JsonResponse({"status": "ok",'data':l})
+    return JsonResponse({"status": "ok",'data':l})
 
 
 
 def user_view_facility(request):
-    obj = Facilities.objects.all()
+    cid= request.POST["cid"]
+    obj = Facilities.objects.filter(COLLEGE_id=cid)
     l = []
     for i in obj:
         l.append({"id": i.id,
@@ -1300,7 +1452,8 @@ def user_view_facility(request):
                   "details": i.details,
                   'photo':i.photo,
                   })
-        return JsonResponse({"status": "ok",'data':l})
+    print(l,"heeeeeeee")
+    return JsonResponse({"status": "ok",'data':l})
 
 def user_skill(request):
     # vid=request.POST['vid']
@@ -1359,6 +1512,126 @@ def user_View_jobRequest_get(request):
                                     })
     print(s)
     return JsonResponse({"status": "ok", 'data': s})
+
+
+from django.http import JsonResponse
+import numpy as np
+from sklearn.ensemble import RandomForestClassifier
+from sklearn.preprocessing import MultiLabelBinarizer
+
+
+def recommend_vacancies(request):
+    user = request.POST.get('lid')  # Use .get() to avoid KeyError
+
+    print(user, '-----------')
+
+    user_skills = list(OwnSkill.objects.filter(USER__LOGIN_id=user).values_list("SKILL_id", flat=True))
+    if not user_skills:
+        print("No skills found for user.")
+        return JsonResponse({"message": "No skills found for user.", "recommendations": []})
+
+    vacancies = Vaccancy.objects.all()
+
+    # Collect vacancy skills
+    vacancy_skills = {}
+    for vs in Vaccancy_Skill.objects.all():
+        if vs.VACCANCY_id not in vacancy_skills:
+            vacancy_skills[vs.VACCANCY_id] = []
+        vacancy_skills[vs.VACCANCY_id].append(vs.SKILL_id)
+
+    if not vacancy_skills:
+        return JsonResponse({"message": "No vacancy data available.", "recommendations": []})
+
+    # Convert to a structured format
+    all_skills = set(skill for skills in vacancy_skills.values() for skill in skills)
+    mlb = MultiLabelBinarizer(classes=list(all_skills))
+
+    X = mlb.fit_transform(vacancy_skills.values())
+    y = list(vacancy_skills.keys())
+
+    if len(X) == 0:
+        return JsonResponse({"message": "No vacancy data available.", "recommendations": []})
+
+    # Train model
+    model = RandomForestClassifier(n_estimators=100, random_state=42)
+    model.fit(X, y)
+
+    # Convert user skills into a compatible format
+    user_skills_array = mlb.transform([user_skills])
+
+    recommended_vacancy_ids = model.predict(user_skills_array)
+
+    # Fetch recommended vacancies
+    recommended_vacancies = Vaccancy.objects.filter(id__in=recommended_vacancy_ids)
+
+    data = [
+        {
+            "id": vacancy.id,
+            "job_title": vacancy.job_title,
+            "company": vacancy.COMPANY.name,
+            "start_date": vacancy.start_date,
+            "end_date": vacancy.end_date,
+        }
+        for vacancy in recommended_vacancies
+    ]
+
+    print('----------------')
+    print(data,'aaa')
+    print('---------------')
+
+    return JsonResponse({"status":"ok","data": data})
+
+# def recommend_vacancies(request):
+#     import numpy as np
+#     from sklearn.ensemble import RandomForestClassifier
+#     user = request.POST['lid']
+#
+#     print(user,'-----------')
+#
+#     user_skills = list(OwnSkill.objects.filter(USER__LOGIN_id=user).values_list("SKILL_id", flat=True))
+#     if not user_skills:
+#         print("no")
+#         return JsonResponse({"message": "No skills found for user.", "recommendations": []})
+#
+#     vacancies = Vaccancy.objects.all()
+#     vacancy_skills = {
+#         v.VACCANCY_id: [] for v in Vaccancy_Skill.objects.all()
+#     }
+#     for vs in Vaccancy_Skill.objects.all():
+#         vacancy_skills[vs.VACCANCY_id].append(vs.SKILL_id)
+#
+#     X, y = [], []
+#     for vacancy_id, skills in vacancy_skills.items():
+#         if skills:
+#             X.append(skills)
+#             y.append(vacancy_id)
+#
+#     if not X:
+#         return JsonResponse({"message": "No vacancy data available.", "recommendations": []})
+#
+#     model = RandomForestClassifier(n_estimators=100, random_state=42)
+#     model.fit(X, y)
+#
+#     user_skills_array = np.array(user_skills).reshape(1, -1)
+#     recommended_vacancy_ids = model.predict(user_skills_array)
+#
+#     recommended_vacancies = Vaccancy.objects.filter(id__in=recommended_vacancy_ids)
+#
+#     data = [
+#         {
+#             "id": vacancy.id,
+#             "job_title": vacancy.job_title,
+#             "company": vacancy.COMPANY.name,
+#             "start_date": vacancy.start_date,
+#             "end_date": vacancy.end_date,
+#         }
+#         for vacancy in recommended_vacancies
+#     ]
+#     print('----------------')
+#     print(data)
+#     print('---------------')
+#
+#     return JsonResponse({"data": data})
 
 
 

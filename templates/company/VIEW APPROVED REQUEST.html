@@ -37,7 +37,7 @@
       <td>{{ i.USER.name }}</td>
       <td>{{ i.USER.place }},<br>{{  i.USER.post}},<br>{{ i.USER.pin }},<br>{{ i.USER.district }},<br>{{ i.USER.state }}</td>
       <td>{{ i.USER.email }},<br>{{  i.USER.phone}}</td>
-      <td><a href="/myapp/view_resume/{{ i.USER.id }}#abc" class="btn btn-info">RESUME</a></td>
+      <td><a href="{{ i.file }}#abc" class="btn btn-info">RESUME</a></td>
     </tr>
       {% endfor %}
   </table>

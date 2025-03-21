@@ -24,6 +24,7 @@
       <th scope="col">SL NO</th>
       <th scope="col">COURSE NAME</th>
       <th scope="col">SEMESTER</th>
+      <th scope="col">PREFERENCES</th>
       <th scope="col">DEPARTMENT NAME</th>
       <th scope="col">&nbsp;</th>
     </tr>
@@ -32,6 +33,7 @@
       <td>{{ forloop.counter }}</td>
       <td>&nbsp;{{ i.course_name }}</td>
       <td>{{ i.semester}}</td>
+      <td>{{ i.preference }}</td>
       <td>&nbsp;{{ i.DEPARTMENT.department_name }}</td>
       <td><p><a href="/myapp/edit_course_get/{{ i.id }}#abc" class="btn btn-info">EDIT</a></p>
       <p><a href="/myapp/delete_course/{{ i.id }}#abc" class="btn btn-danger">DELETE</a></p></td>

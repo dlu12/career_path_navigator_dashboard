@@ -89,6 +89,7 @@ class Department(models.Model):
 class Course(models.Model):
     course_name = models.CharField(max_length=100)
     semester = models.CharField(max_length=100)
+    preference = models.CharField(max_length=100,default='')
     DEPARTMENT = models.ForeignKey(Department, on_delete=models.CASCADE)
 
 
@@ -113,6 +114,7 @@ class Facilities(models.Model):
     facility_name = models.CharField(max_length=100)
     details = models.CharField(max_length=100)
     photo = models.CharField(max_length=400)
+    COLLEGE=models.ForeignKey(College,on_delete=models.CASCADE,default="")
 
 class Resume(models.Model):
     resume = models.CharField(max_length=100)
@@ -128,3 +130,4 @@ class JobRequest(models.Model):
     VACANCY =models.ForeignKey(Vaccancy, on_delete=models.CASCADE)
     file=models.CharField(max_length=250)
     status=models.CharField(max_length=100)
+

@@ -82,6 +82,7 @@ urlpatterns = [
     path('view_resume/<id>', views.view_resume),
     path('add_vaccancy_company_skill_get/<id>', views.add_vaccancy_company_skill_get),
     path('add_vaccany_company_skill_post/', views.add_vaccancy_company_skill_post),
+    path('recommend_vacancies/', views.recommend_vacancies),
 
 
     ###college
@@ -114,6 +115,9 @@ urlpatterns = [
     path('view_fee_post/', views.view_fee_post),
     path('college_change_password_get/', views.college_change_password_get),
     path('college_change_password_post/', views.college_change_password_post),
+    # path('add_courserec_get/', views.add_courserec_get),
+    # path('add_courserec_post/', views.add_courserec_post),
+
 
     path('delete_department/<id>', views.delete_department),
     path('delete_course/<id>', views.delete_course),
@@ -140,6 +144,7 @@ urlpatterns = [
     path('user_view_reply/', views.user_view_reply),
     path('user_view_college/', views.user_view_college),
     path('user_view_course/', views.user_view_course),
+    path('user_view_course_rec/', views.user_view_course_rec),
     path('user_view_facility/', views.user_view_facility),
     path('user_view_fees/', views.user_view_fees),
     path('user_viewprofile/', views.user_viewprofile),
